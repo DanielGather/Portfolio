@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('./assets/fonts/fira-code-v22-latin-regular.woff2');
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('./assets/fonts/karla-v31-latin-regular.woff2');
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    // max-width: 1440px;
+}
+
+app-root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+.page{
+    width: 100%;
+    max-width: 1440px;
+    min-width: 1440px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background: linear-gradient(45deg, $start-color, $end-color)
+
+}
