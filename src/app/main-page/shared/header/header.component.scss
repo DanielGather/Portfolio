@@ -1,20 +1,48 @@
+@import "../../../../variables.scss";
+@import "../../../../mixin.scss";
+
 .header {
+  @include dFlex($jc: space-between);
   position: sticky;
   top: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   height: 100px;
   p {
     font-size: 20px;
-    font-family: "FiraCode";
+    font-family: $font-fira;
     color: white;
   }
 }
 .header-left-container {
   display: flex;
   gap: 1.5rem;
+  cursor: pointer;
+}
+
+.hover-container {
+  @include dFlex();
+  flex-direction: column;
+  :hover + .point {
+    opacity: 1;
+  }
+}
+
+.point {
+  @include dFlex($ai: unset);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 8px;
+  font-size: 32px !important;
+  color: $main-color !important;
+}
+
+.outline {
+  font-size: 32px !important;
+  &:hover {
+    color: transparent !important;
+    -webkit-text-stroke: 0.65px white;
+  }
 }
 
 // .language {
