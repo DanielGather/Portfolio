@@ -1,0 +1,152 @@
+@import "../../../variables.scss";
+
+.aboveTheFold {
+  display: flex;
+  height: calc(100vh - 100px);
+  width: 100%;
+  max-width: 1440px;
+  position: relative;
+  justify-content: center;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 500px;
+  padding-bottom: 16px;
+  gap: 32px;
+  width: 5%;
+  height: 100%;
+  img {
+    width: 30px;
+    height: 48px;
+  }
+}
+
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: 1.5rem;
+  font-family: Karla;
+  color: white;
+  h1 {
+    font-size: 128px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+  font-family: Karla;
+  padding-top: 320px;
+  padding-bottom: 16px;
+  a {
+    width: 100%;
+    width: 32px;
+    height: 32px;
+    // padding-left: 16px;
+  }
+  p {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  img {
+    object-fit: cover;
+  }
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.stroke {
+  //   transform: rotate(90deg);
+  background-color: $main-color;
+  border: none;
+  height: 100%;
+  width: 1px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  height: 48px;
+
+  button {
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+    border-radius: 1rem;
+    min-width: 150px;
+    background-color: transparent;
+    color: white;
+
+    p {
+      text-shadow: 0 0 1px $main-color, 32ch 0 1px $main-color;
+      font-family: Karla;
+      font-size: 18px;
+    }
+    overflow: hidden;
+  }
+  :hover {
+    border-color: $main-color;
+    color: transparent;
+    transition: border-color 1s ease-in-out;
+
+    p {
+      transition: text-shadow 4s ease-in-out;
+      animation: moveButtonText 2s linear infinite;
+    }
+  }
+}
+
+.banner {
+  display: flex;
+  color: transparent;
+  font-size: 32px;
+  font-family: Karla;
+  transform: rotate(-5deg);
+  width: 112%;
+  position: absolute;
+  bottom: 6rem;
+  gap: 1rem;
+  white-space: nowrap;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  background-color: #373a39;
+  opacity: 0.8;
+  justify-content: flex-start;
+  text-shadow: 0 0 1px $main-color, 73ch 0 1px $main-color,
+    146ch 0 1px $main-color;
+  animation: slide 10s linear infinite;
+}
+
+.standardGitHub {
+  display: flex;
+}
+
+.hoverGitHub {
+  display: none;
+}
+
+@keyframes slide {
+  to {
+    text-shadow: -73ch 0 1px $main-color, 0ch 0 1px $main-color,
+      73ch 0 1px $main-color;
+  }
+}
+
+@keyframes moveButtonText {
+  to {
+    text-shadow: -32ch 0 1px $main-color, 0ch 0 1px $main-color;
+  }
+}
