@@ -1,0 +1,26 @@
+@import "../../../../variables.scss";
+@import "../../../../mixin.scss";
+
+.banner {
+  @include dFlex($jc: flex-start, $ai: unset, $g: 1rem);
+  color: transparent;
+  font-size: 2rem;
+  font-family: $font-karla;
+  width: 160%;
+  gap: 1rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  background-color: #373a39;
+  white-space: nowrap;
+  opacity: 0.8;
+  transform: rotate(-5deg);
+  text-shadow: 0 0 1px $main-color, 73ch 0 1px $main-color,
+    146ch 0 1px $main-color;
+  animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+  to {
+    text-shadow: -73ch 0 1px $main-color, 0ch 0 1px $main-color,
+      73ch 0 1px $main-color;
+  }
+}

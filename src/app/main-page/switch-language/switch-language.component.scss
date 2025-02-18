@@ -1,33 +1,30 @@
+@import "../../../mixin.scss";
+@import "../../../variables.scss";
+
 .language {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  // gap: 1rem;
+  @include dFlex($jc: unset);
   width: 100px;
   height: 32px;
-  border: 1px solid #3dcfb6;
+  border: 1px solid $main-color;
   border-radius: 1rem;
+  cursor: pointer;
   p {
     font-size: 16px;
-    font-family: "FiraCode";
+    font-family: $font-fira;
   }
 }
 
 .active {
+  @include dFlex();
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #3dcfb6;
+  background-color: $main-color;
   width: 50%;
   height: 100%;
   border-radius: 0.8rem;
 }
 
 .notActive {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include dFlex();
   width: 50%;
   height: 100%;
   p {

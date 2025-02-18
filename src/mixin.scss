@@ -1,0 +1,13 @@
+@mixin dFlex($jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin padding($pt: 0, $pr: 0, $pb: 0, $pl: 0) {
+  padding-top: $pt;
+  padding-right: $pr;
+  padding-bottom: $pb;
+  padding-left: $pl;
+}

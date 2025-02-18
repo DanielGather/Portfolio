@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { BannerComponent } from './banner/banner.component';
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [],
+  imports: [BannerComponent],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss',
 })

@@ -1,21 +1,19 @@
 @import "../../../variables.scss";
+@import "../../../mixin.scss";
 
 .aboveTheFold {
-  display: flex;
+  @include dFlex($ai: unset);
   height: calc(100vh - 100px);
   width: 100%;
   max-width: 1440px;
   position: relative;
-  justify-content: center;
 }
 
 .left-container {
-  display: flex;
+  @include dFlex($jc: unset, $g: 2rem);
   flex-direction: column;
-  align-items: center;
   padding-top: 500px;
   padding-bottom: 16px;
-  gap: 32px;
   width: 5%;
   height: 100%;
   img {
@@ -25,32 +23,26 @@
 }
 
 .middle-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  @include dFlex($g: 1.5rem);
   width: 100%;
-  gap: 1.5rem;
-  font-family: Karla;
+  flex-direction: column;
+  text-align: center;
   color: white;
+  font-family: $font-karla;
   h1 {
-    font-size: 128px;
+    font-size: 8rem;
   }
   h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
 .right-container {
-  display: flex;
+  @include dFlex($jc: unset, $g: 1rem);
   flex-direction: column;
-  align-items: center;
   color: white;
-  gap: 1rem;
-  font-family: Karla;
-  padding-top: 320px;
-  padding-bottom: 16px;
+  font-family: $font-karla;
+  padding: 20rem 0rem 1rem 0rem;
   a {
     width: 100%;
     width: 32px;
@@ -61,6 +53,9 @@
     writing-mode: vertical-rl;
     transform: rotate(180deg);
   }
+  :hover {
+    color: $main-color;
+  }
   img {
     object-fit: cover;
   }
@@ -70,7 +65,6 @@
 }
 
 .stroke {
-  //   transform: rotate(90deg);
   background-color: $main-color;
   border: none;
   height: 100%;
@@ -78,22 +72,21 @@
 }
 
 .buttons {
-  display: flex;
-  gap: 16px;
+  @include dFlex($jc: unset, $ai: unset, $g: 1rem);
   height: 48px;
 
   button {
     cursor: pointer;
     border: 1px solid white;
-    padding: 0.75rem 0.5rem 0.75rem 0.5rem;
     border-radius: 1rem;
+    padding: 0.75rem 0.5rem 0.75rem 0.5rem;
     min-width: 150px;
     background-color: transparent;
     color: white;
 
     p {
       text-shadow: 0 0 1px $main-color, 32ch 0 1px $main-color;
-      font-family: Karla;
+      font-family: $font-karla;
       font-size: 18px;
     }
     overflow: hidden;
@@ -110,25 +103,24 @@
   }
 }
 
-.banner {
-  display: flex;
-  color: transparent;
-  font-size: 32px;
-  font-family: Karla;
-  transform: rotate(-5deg);
-  width: 112%;
-  position: absolute;
-  bottom: 6rem;
-  gap: 1rem;
-  white-space: nowrap;
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-  background-color: #373a39;
-  opacity: 0.8;
-  justify-content: flex-start;
-  text-shadow: 0 0 1px $main-color, 73ch 0 1px $main-color,
-    146ch 0 1px $main-color;
-  animation: slide 10s linear infinite;
-}
+// .banner {
+//   @include dFlex($jc: flex-start, $ai: unset, $g: 1rem);
+//   color: transparent;
+//   font-size: 2rem;
+//   font-family: Karla;
+//   width: 160%;
+//   position: absolute;
+//   bottom: 6rem;
+//   gap: 1rem;
+//   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+//   background-color: #373a39;
+//   white-space: nowrap;
+//   opacity: 0.8;
+//   transform: rotate(-5deg);
+//   text-shadow: 0 0 1px $main-color, 73ch 0 1px $main-color,
+//     146ch 0 1px $main-color;
+//   animation: slide 10s linear infinite;
+// }
 
 .standardGitHub {
   display: flex;
@@ -138,12 +130,12 @@
   display: none;
 }
 
-@keyframes slide {
-  to {
-    text-shadow: -73ch 0 1px $main-color, 0ch 0 1px $main-color,
-      73ch 0 1px $main-color;
-  }
-}
+// @keyframes slide {
+//   to {
+//     text-shadow: -73ch 0 1px $main-color, 0ch 0 1px $main-color,
+//       73ch 0 1px $main-color;
+//   }
+// }
 
 @keyframes moveButtonText {
   to {

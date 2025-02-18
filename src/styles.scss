@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixin";
 
 @font-face {
   font-family: "FiraCode";
@@ -11,9 +12,7 @@
 }
 
 app-root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include dFlex();
 }
 
 * {
