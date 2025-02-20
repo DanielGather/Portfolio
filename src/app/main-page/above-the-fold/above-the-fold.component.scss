@@ -22,7 +22,8 @@
   }
 }
 
-.middle-container {
+.middle-container,
+.middle-container-responsive {
   @include dFlex($g: 1.5rem);
   width: 100%;
   flex-direction: column;
@@ -35,6 +36,10 @@
   h2 {
     font-size: 2.5rem;
   }
+}
+
+.middle-container-responsive {
+  display: none;
 }
 
 .right-container {
@@ -103,25 +108,6 @@
   }
 }
 
-// .banner {
-//   @include dFlex($jc: flex-start, $ai: unset, $g: 1rem);
-//   color: transparent;
-//   font-size: 2rem;
-//   font-family: Karla;
-//   width: 160%;
-//   position: absolute;
-//   bottom: 6rem;
-//   gap: 1rem;
-//   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-//   background-color: #373a39;
-//   white-space: nowrap;
-//   opacity: 0.8;
-//   transform: rotate(-5deg);
-//   text-shadow: 0 0 1px $main-color, 73ch 0 1px $main-color,
-//     146ch 0 1px $main-color;
-//   animation: slide 10s linear infinite;
-// }
-
 .standardGitHub {
   display: flex;
 }
@@ -130,15 +116,33 @@
   display: none;
 }
 
-// @keyframes slide {
-//   to {
-//     text-shadow: -73ch 0 1px $main-color, 0ch 0 1px $main-color,
-//       73ch 0 1px $main-color;
-//   }
-// }
+.mail {
+  display: none;
+}
 
 @keyframes moveButtonText {
   to {
     text-shadow: -32ch 0 1px $main-color, 0ch 0 1px $main-color;
+  }
+}
+
+@media (max-width: 700px) {
+  .middle-container {
+    display: none;
+  }
+  .mail {
+    display: unset;
+  }
+  .fullMail {
+    display: none;
+  }
+  .middle-container-responsive {
+    display: flex;
+    h1 {
+      font-size: 62px;
+    }
+    h2 {
+      font-size: 24px;
+    }
   }
 }

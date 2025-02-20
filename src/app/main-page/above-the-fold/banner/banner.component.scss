@@ -24,3 +24,9 @@
       73ch 0 1px $main-color;
   }
 }
+
+@media (max-width: 1200px) {
+  .banner {
+    width: 170%;
+  }
+}
