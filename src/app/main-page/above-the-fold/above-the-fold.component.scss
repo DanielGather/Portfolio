@@ -2,7 +2,11 @@
 @import "../../../mixin.scss";
 
 .aboveTheFold {
-  @include dFlex($ai: unset);
+  // @include dFlex($ai: unset);
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 5% 100% 5%;
+  grid-template-rows: auto;
   height: calc(100vh - 100px);
   width: 100%;
   max-width: 1440px;
@@ -14,8 +18,6 @@
   flex-direction: column;
   padding-top: 500px;
   padding-bottom: 16px;
-  width: 5%;
-  height: 100%;
   img {
     width: 30px;
     height: 48px;
@@ -24,7 +26,6 @@
 
 .middle-container {
   @include dFlex($g: 1.5rem);
-  width: 100%;
   flex-direction: column;
   text-align: center;
   color: white;
@@ -33,6 +34,7 @@
     font-size: 8rem;
   }
   h2 {
+    font-weight: 100;
     font-size: 2.5rem;
   }
 }
@@ -72,14 +74,13 @@
 }
 
 .buttons {
-  @include dFlex($jc: unset, $ai: unset, $g: 1rem);
+  @include dFlex($jc: unset, $ai: unset, $g: 1.5rem);
   height: 48px;
-
   button {
     cursor: pointer;
     border: 1px solid white;
-    border-radius: 1rem;
-    padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+    border-radius: 1.5rem;
+    // padding: 0.75rem 0.5rem 0.75rem 0.5rem;
     min-width: 150px;
     background-color: transparent;
     color: white;
@@ -135,6 +136,34 @@
     }
     h2 {
       font-size: 24px;
+    }
+  }
+  .aboveTheFold {
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: auto auto;
+  }
+  .middle-container {
+    grid-column: 1 / 4;
+    grid-row: 1;
+  }
+  .left-container {
+    grid-column: 1;
+    grid-row: 2;
+    padding: unset;
+    padding-bottom: 1rem;
+  }
+  .right-container {
+    grid-column: 3;
+    grid-row: 2;
+    padding: unset;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .middle-container {
+    h1 {
+      font-size: 40px;
     }
   }
 }

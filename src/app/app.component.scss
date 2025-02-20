@@ -18,3 +18,17 @@
     $end-color 100%
   );
 }
+
+@media (max-width: 500px) {
+  .page {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

@@ -13,26 +13,25 @@ import { BannerComponent } from './banner/banner.component';
 export class AboveTheFoldComponent implements OnInit, OnDestroy {
   constructor() {}
 
-  resizeSubscription?: Subscription;
+  // resizeSubscription?: Subscription;
 
   githubImage: string = './../../../assets/img/greenGithub.webp';
   linkedInImage: string = './../../../assets/img/greenLinkedIn.webp';
   mailImage: string = './../../../assets/img/mail.webp';
 
-  responsive?: boolean;
+  // responsive?: boolean;
 
   ngOnInit(): void {
-    this.resizeSubscription = fromEvent(window, 'resize')
-      .pipe(debounceTime(200)) // Verhindert, dass zu viele Events hintereinander verarbeitet werden
-      .subscribe((event: Event) => {
-        console.log('Resize-Event erkannt:', event);
-        if (window.innerWidth < 700) {
-          this.responsive = true;
-        } else if (window.innerWidth > 700) {
-          this.responsive = false;
-        }
-        // Hier kannst du weitere Logik einfügen
-      });
+    // this.resizeSubscription = fromEvent(window, 'resize')
+    //   .pipe(debounceTime(200))
+    //   .subscribe((event: Event) => {
+    //     console.log('Resize-Event erkannt:', event);
+    //     if (window.innerWidth < 700) {
+    //       this.responsive = true;
+    //     } else if (window.innerWidth > 700) {
+    //       this.responsive = false;
+    //     }
+    //   });
   }
 
   changeImage(image: string) {
@@ -44,6 +43,7 @@ export class AboveTheFoldComponent implements OnInit, OnDestroy {
       this.mailImage = './../../../assets/img/hoverMail.webp';
     }
   }
+
   resetImage(image: string) {
     if (image == 'github') {
       this.githubImage = './../../../assets/img/greenGithub.webp';
@@ -54,11 +54,9 @@ export class AboveTheFoldComponent implements OnInit, OnDestroy {
     }
   }
 
-  checkResize() {}
-
   ngOnDestroy(): void {
-    if (this.resizeSubscription) {
-      this.resizeSubscription.unsubscribe();
-    }
+    // if (this.resizeSubscription) {
+    //   this.resizeSubscription.unsubscribe();
+    // }
   }
 }
