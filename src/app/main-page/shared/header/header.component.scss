@@ -45,8 +45,23 @@
   }
 }
 
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bar {
+  width: 32px;
+  height: 1.5px;
+  background-color: white;
+}
+
 @media (max-width: 750px) {
   .header-left-container {
     display: none;
+  }
+  .burger-menu {
+    display: flex;
   }
 }
