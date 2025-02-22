@@ -1,6 +1,15 @@
+<p
+  style="
+    color: #3dcfb6;
+    font-size: 24px;
+    font-family: Karla;
+    padding-bottom: 1rem;
+  "
+>
+  Technologies
+</p>
 <div class="skill-container">
   <div class="technologies">
-    <p style="color: #3dcfb6; font-size: 24px">Technologies</p>
     <div class="left-container">
       <h2>Skill set</h2>
       <span
@@ -23,5 +32,39 @@
         <button><p>Let's Talk</p></button>
       </div>
     </div>
+  </div>
+  <div class="skills">
+    @for (skill of skills; let last = $last; track skill){
+    <div class="skill" [class.tooltip]="last">
+      <img [src]="skill.img" alt="" />
+      <p>{{ skill.tag }}</p>
+      @if(last){
+      <div class="tooltiptext">
+        <p style="color: #3dcfb6; font-size: 16px">
+          I have a special interest in learning
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <img
+            style="width: 32px; height: auto"
+            src="./../../../assets/img/skills/vuejs.webp"
+            alt=""
+          />
+          <img
+            style="width: 32px; height: auto"
+            src="./../../../assets/img/skills/react.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      }
+    </div>
+    }
   </div>
 </div>
