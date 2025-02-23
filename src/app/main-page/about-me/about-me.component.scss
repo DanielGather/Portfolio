@@ -9,6 +9,7 @@
 }
 
 .photo {
+  position: relative;
   min-width: 568px;
   height: auto;
   img {
@@ -52,6 +53,13 @@
   }
 }
 
+.hatching {
+  position: absolute;
+  top: 2rem;
+  left: -2rem;
+  z-index: -1;
+}
+
 @media (max-width: 1200px) {
   .photo {
     min-width: clamp(250px, 45vw, 568px);
@@ -69,5 +77,19 @@
   }
   .about-me {
     padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hatching {
+    top: 1rem;
+    left: -1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hatching {
+    top: 0.5rem;
+    left: -0.5rem;
   }
 }

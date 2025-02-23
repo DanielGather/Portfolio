@@ -1,0 +1,17 @@
+<div class="all-projects">
+  @for (project of projects; let last = $last; track project){
+  <div [ngStyle]="{ 'border-bottom': last ? borderColor : '' }" class="project">
+    <div class="left-container">
+      <p>{{ project.projectName }}</p>
+      <img src="./../../../../assets/img/arrow_outward.webp" alt="" />
+    </div>
+    <div class="technologies">
+      @for (tech of project.technologiesUsed; let last = $last; track tech ){
+      <p>{{ tech }}</p>
+      @if(!last){
+      <div>|</div>
+      } }
+    </div>
+  </div>
+  }
+</div>

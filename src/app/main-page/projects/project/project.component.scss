@@ -1,0 +1,41 @@
+@import "./../../../../mixin.scss";
+@import "./../../../../variables.scss";
+
+.all-projects {
+  max-width: 65%;
+  padding-top: 2rem;
+}
+.project {
+  @include dFlex($jc: space-between);
+  @include font($fs: 24px, $fw: 700, $ff: $font-fira);
+  height: 100px;
+  border-top: 1px solid $main-color;
+  color: white;
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+.project:hover {
+  background-color: #2f5b54;
+  cursor: pointer;
+}
+
+.left-container {
+  @include dFlex($g: 0.5rem);
+  img {
+    display: none;
+    object-fit: cover;
+  }
+}
+
+.project:hover img {
+  display: unset;
+}
+
+.technologies {
+  @include font($fs: 18px, $ff: $font-karla);
+  display: flex;
+  gap: 0.5rem;
+  & div {
+    color: $main-color;
+  }
+}

@@ -1,3 +1,4 @@
+@import "./variables.scss";
 @mixin dFlex($jc: center, $ai: center, $g: 0px) {
   display: flex;
   justify-content: $jc;
@@ -10,4 +11,10 @@
   padding-right: $pr;
   padding-bottom: $pb;
   padding-left: $pl;
+}
+
+@mixin font($fs: 18px, $fw: 400, $ff: FiraCode) {
+  font-size: $fs;
+  font-weight: $fw;
+  font-family: $ff;
 }

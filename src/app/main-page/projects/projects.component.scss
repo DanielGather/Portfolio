@@ -1,0 +1,14 @@
+@import "./../../../mixin.scss";
+@import "./../../../variables.scss";
+
+.projects {
+  color: $main-color;
+  font-family: $font-karla;
+  font-size: 24px;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  h2 {
+    font-family: $font-fira;
+    font-size: 64px;
+  }
+}
