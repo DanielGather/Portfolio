@@ -1,5 +1,5 @@
 <div class="all-projects">
-  @for (project of projects; let last = $last; track project){
+  @for (project of featuredProjects; let last = $last; track project){
   <div [ngStyle]="{ 'border-bottom': last ? borderColor : '' }" class="project">
     <div class="left-container">
       <p>{{ project.projectName }}</p>

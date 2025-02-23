@@ -13,5 +13,5 @@ export class ProjectComponent {
 
   borderColor = '1px solid #3dcfb6';
 
-  @Input() projects: Projects[] = [];
+  @Input() featuredProjects: Projects[] = [];
 }

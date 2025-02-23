@@ -9,7 +9,7 @@ import { ProjectComponent } from './project/project.component';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  projects = [
+  Projects = [
     {
       projectName: 'Join',
       technologiesUsed: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
