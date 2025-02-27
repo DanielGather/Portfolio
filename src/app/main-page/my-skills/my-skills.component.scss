@@ -108,6 +108,7 @@
 }
 
 .tooltip .tooltiptext {
+  position: absolute;
   visibility: hidden;
   width: 220px;
   background-color: white;
@@ -115,7 +116,6 @@
   text-align: center;
   border-radius: 1rem;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-  position: absolute;
   z-index: 1;
   bottom: 100%;
   left: 50%;

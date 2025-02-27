@@ -2,8 +2,14 @@
 @import "./../../../../variables.scss";
 
 .all-projects {
-  max-width: 65%;
+  display: flex;
+  width: 100%;
   padding-top: 2rem;
+  gap: 4rem;
+}
+
+.projects-container {
+  width: 100%;
 }
 .project {
   @include dFlex($jc: space-between);
@@ -37,5 +43,60 @@
   gap: 0.5rem;
   & div {
     color: $main-color;
+  }
+}
+
+.hover-project {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  img {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    border-radius: 1rem;
+  }
+}
+
+.background-hatching {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+.project-img-container {
+  position: absolute;
+}
+
+@media (max-width: 1200px) {
+  .all-projects {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hover-project {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .project {
+    flex-direction: column;
+    justify-content: center;
+    height: 125px;
+    gap: 1rem;
+    padding: unset;
+  }
+  .left-container {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 24px;
+    font-family: $font-fira;
+  }
+  .technologies {
+    width: 100%;
+    font-size: 16px;
+    gap: 0.25rem;
   }
 }

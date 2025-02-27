@@ -9,9 +9,15 @@ import { NgStyle } from '@angular/common';
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
-  @Input() test: string = 'Ich funktioniere';
-
   borderColor = '1px solid #3dcfb6';
 
   @Input() featuredProjects: Projects[] = [];
+
+  hoverProject(project: Projects) {
+    project.hover = true;
+  }
+
+  leaveHover(project: Projects) {
+    project.hover = false;
+  }
 }

@@ -1,17 +1,43 @@
 <div class="all-projects">
-  @for (project of featuredProjects; let last = $last; track project){
-  <div [ngStyle]="{ 'border-bottom': last ? borderColor : '' }" class="project">
-    <div class="left-container">
-      <p>{{ project.projectName }}</p>
-      <img src="./../../../../assets/img/arrow_outward.webp" alt="" />
+  <div class="projects-container">
+    @for (project of featuredProjects; let last = $last; track project){
+    <div
+      [ngStyle]="{ 'border-bottom': last ? borderColor : '' }"
+      class="project"
+      (mouseenter)="hoverProject(project)"
+      (mouseleave)="leaveHover(project)"
+    >
+      <div class="left-container">
+        <p>{{ project.projectName }}</p>
+        <img src="./../../../../assets/img/arrow_outward.webp" alt="" />
+      </div>
+      <div class="technologies">
+        @for (tech of project.technologiesUsed; let last = $last; track tech ){
+        <p>{{ tech }}</p>
+        @if(!last){
+        <div>|</div>
+        } }
+      </div>
     </div>
-    <div class="technologies">
-      @for (tech of project.technologiesUsed; let last = $last; track tech ){
-      <p>{{ tech }}</p>
-      @if(!last){
-      <div>|</div>
-      } }
-    </div>
+    }
   </div>
-  }
+
+  <div class="hover-project">
+    @for (project of featuredProjects; let first = $first; let last = $last; let
+    index = $index; track project){ @if(project.hover){
+    <div
+      [style.top.px]="first ? 0 : null"
+      [style.top.px]="!first && !last ? 50 + (index - 1) * 100 : null"
+      [style.bottom.px]="last ? 0 + 200 : null"
+      class="project-img-container"
+    >
+      <img
+        class="background-hatching"
+        src="./../../../../assets/img/background-hatching.webp"
+        alt=""
+      />
+      <img src="{{ project.imgProject }}" alt="" />
+    </div>
+    } }
+  </div>
 </div>

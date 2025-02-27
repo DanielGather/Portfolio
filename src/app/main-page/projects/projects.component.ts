@@ -13,10 +13,26 @@ export class ProjectsComponent {
     {
       projectName: 'Join',
       technologiesUsed: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+      hover: false,
+      imgProject: './../../../../assets/img/joinProject.webp',
     },
     {
-      projectName: 'El Pollo Loco',
+      projectName: 'Sharkie',
       technologiesUsed: ['HTML', 'CSS', 'JavaScript'],
+      hover: false,
+      imgProject: './../../../../assets/img/sharkieProject.webp',
+    },
+    {
+      projectName: 'Join',
+      technologiesUsed: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+      hover: false,
+      imgProject: './../../../../assets/img/joinProject.webp',
+    },
+    {
+      projectName: 'Join',
+      technologiesUsed: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+      hover: false,
+      imgProject: './../../../../assets/img/joinProject.webp',
     },
   ];
 }
