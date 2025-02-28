@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Projects } from '../projects';
 
 @Component({
@@ -10,4 +10,10 @@ import { Projects } from '../projects';
 })
 export class PopUpWindowComponent {
   @Input() popupProject!: Projects | null;
+
+  @Output() closeDialog = new EventEmitter<null>();
+
+  closePopUp() {
+    this.closeDialog.emit(null);
+  }
 }

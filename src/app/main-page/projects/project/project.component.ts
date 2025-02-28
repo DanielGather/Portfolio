@@ -31,4 +31,8 @@ export class ProjectComponent {
     this.activeProject = project;
     console.log(this.activeProject);
   }
+
+  closePopUp(close: null) {
+    this.activeProject = close;
+  }
 }

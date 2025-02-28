@@ -46,6 +46,7 @@
   <app-pop-up-window
     *ngIf="activeProject"
     [popupProject]="activeProject"
+    (closeDialog)="closePopUp($event)"
     #popupContainer
   ></app-pop-up-window>
 </div>
