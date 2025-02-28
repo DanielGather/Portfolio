@@ -13,15 +13,15 @@
   white-space: nowrap;
   opacity: 0.8;
   transform: rotate(-5deg);
-  text-shadow: 0 0 1px $main-color, 73ch 0 1px $main-color,
+  text-shadow: 0 0 1px $main-color, 78ch 0 1px $main-color,
     146ch 0 1px $main-color;
   animation: slide 10s linear infinite;
 }
 
 @keyframes slide {
   to {
-    text-shadow: -73ch 0 1px $main-color, 0ch 0 1px $main-color,
-      73ch 0 1px $main-color;
+    text-shadow: -78ch 0 1px $main-color, 0ch 0 1px $main-color,
+      78ch 0 1px $main-color;
   }
 }
 
