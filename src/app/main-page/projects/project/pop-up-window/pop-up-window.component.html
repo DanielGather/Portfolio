@@ -1,0 +1,51 @@
+<div class="pop-up-window">
+  <div class="left-container">
+    <h2>01</h2>
+    <p>{{ popupProject?.projectName }}</p>
+    <p>What is this project about?</p>
+    <p>
+      Task manager inspired by the Kanban System. Create and organize tasks
+      using drag and drop functions, assign users and categories.
+    </p>
+    <div>
+      @for(tech of popupProject?.technologyUsed; track tech){
+      <div>
+        <img src="{{ tech.technologyImg }}" alt="" />
+        <p>{{ tech.technology }}</p>
+      </div>
+      }
+    </div>
+    <div>
+      <button>
+        GitHub
+        <img
+          src="./../../../../../assets/img/pop-up-window/arrow_outward_green.webp"
+          alt=""
+        />
+      </button>
+      <button>
+        LiveTest
+        <img
+          src="./../../../../../assets/img/pop-up-window/arrow_outward_green.webp"
+          alt=""
+        />
+      </button>
+    </div>
+  </div>
+  <div class="right-container">
+    <div>
+      <img
+        src="./../../../../../assets/img/pop-up-window/close_small.webp"
+        alt=""
+      />
+    </div>
+    <img src="{{ popupProject?.imgProject }}" alt="" />
+    <div>
+      <p>Next project</p>
+      <img
+        src="./../../../../../assets/img/pop-up-window/arrow_forward.webp"
+        alt=""
+      />
+    </div>
+  </div>
+</div>

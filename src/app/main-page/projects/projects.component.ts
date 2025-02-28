@@ -12,27 +12,48 @@ export class ProjectsComponent {
   Projects = [
     {
       projectName: 'Join',
-      technologiesUsed: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+      technologyUsed: [
+        {
+          technology: 'HTML',
+          technologyImg: './../../../../../assets/img/pop-up-window/HTML.webp',
+        },
+        {
+          technology: 'CSS',
+          technologyImg: './../../../../../assets/img/pop-up-window/CSS.webp',
+        },
+        {
+          technology: 'JavaScript',
+          technologyImg:
+            './../../../../../assets/img/pop-up-window/JavaScript.webp',
+        },
+        {
+          technology: 'Firebase',
+          technologyImg:
+            './../../../../../assets/img/pop-up-window/Firebase.webp',
+        },
+      ],
       hover: false,
       imgProject: './../../../../assets/img/joinProject.webp',
     },
     {
       projectName: 'Sharkie',
-      technologiesUsed: ['HTML', 'CSS', 'JavaScript'],
+      technologyUsed: [
+        {
+          technology: 'HTML',
+          technologyImg: './../../../../../assets/img/pop-up-window/HTML.webp',
+        },
+        {
+          technology: 'CSS',
+          technologyImg: './../../../../assets/img/pop-up-window/CSS.webp',
+        },
+        {
+          technology: 'JavaScript',
+          technologyImg:
+            './../../../../../assets/img/pop-up-window/JavaScript.webp',
+        },
+      ],
       hover: false,
       imgProject: './../../../../assets/img/sharkieProject.webp',
-    },
-    {
-      projectName: 'Join',
-      technologiesUsed: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
-      hover: false,
-      imgProject: './../../../../assets/img/joinProject.webp',
-    },
-    {
-      projectName: 'Join',
-      technologiesUsed: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
-      hover: false,
-      imgProject: './../../../../assets/img/joinProject.webp',
     },
   ];
 }

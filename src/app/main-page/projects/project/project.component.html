@@ -4,6 +4,7 @@
     <div
       [ngStyle]="{ 'border-bottom': last ? borderColor : '' }"
       class="project"
+      (click)="openPopup(project)"
       (mouseenter)="hoverProject(project)"
       (mouseleave)="leaveHover(project)"
     >
@@ -12,8 +13,9 @@
         <img src="./../../../../assets/img/arrow_outward.webp" alt="" />
       </div>
       <div class="technologies">
-        @for (tech of project.technologiesUsed; let last = $last; track tech ){
-        <p>{{ tech }}</p>
+        @for (tech of project.technologyUsed; let last = $last; track tech ){
+
+        <p>{{ tech.technology }}</p>
         @if(!last){
         <div>|</div>
         } }
@@ -40,4 +42,9 @@
     </div>
     } }
   </div>
+  <app-pop-up-window
+    *ngIf="activeProject"
+    [popupProject]="activeProject"
+    #popupContainer
+  ></app-pop-up-window>
 </div>
