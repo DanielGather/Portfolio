@@ -55,5 +55,25 @@ export class ProjectsComponent {
       hover: false,
       imgProject: './../../../../assets/img/sharkieProject.webp',
     },
+    {
+      projectName: 'Sharkie',
+      technologyUsed: [
+        {
+          technology: 'HTML',
+          technologyImg: './../../../../../assets/img/pop-up-window/HTML.webp',
+        },
+        {
+          technology: 'CSS',
+          technologyImg: './../../../../assets/img/pop-up-window/CSS.webp',
+        },
+        {
+          technology: 'JavaScript',
+          technologyImg:
+            './../../../../../assets/img/pop-up-window/JavaScript.webp',
+        },
+      ],
+      hover: false,
+      imgProject: './../../../../assets/img/sharkieProject.webp',
+    },
   ];
 }
