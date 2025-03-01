@@ -93,14 +93,56 @@
     width: 24px;
     height: 24px;
   }
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  height: 48px;
+  font-family: $font-karla;
+  svg {
+    transition: transform 0.3s ease-in-out;
+  }
+  button {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 1.5rem;
+    min-width: 150px;
+    background-color: transparent;
+    color: white;
+  }
+  :hover {
+    color: $main-color;
+    border-color: $main-color;
+    svg {
+      transform: translate(4px, -2px);
+    }
+  }
 }
 
 .next-project {
   display: flex;
   gap: 1rem;
   align-items: center;
-  img {
+  svg {
+    transition: transform 0.3s ease-in-out;
     width: 24px;
     height: 24px;
+  }
+  &:hover {
+    cursor: pointer;
+    color: white;
+    svg {
+      transform: scale(1.255);
+      transform: translate(3px);
+      stroke-width: 1px;
+    }
   }
 }

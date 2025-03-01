@@ -16,7 +16,7 @@
 .left-container {
   @include dFlex($jc: unset, $g: 2rem);
   flex-direction: column;
-  padding-top: 500px;
+  padding-top: 26rem;
   padding-bottom: 16px;
   img {
     width: 30px;
@@ -44,7 +44,7 @@
   flex-direction: column;
   color: white;
   font-family: $font-karla;
-  padding: 20rem 0rem 1rem 0rem;
+  padding: 14rem 0rem 1rem 0rem;
   a {
     width: 100%;
     width: 32px;
