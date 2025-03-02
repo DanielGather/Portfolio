@@ -16,7 +16,7 @@ export class WhatMyColleaguesSayAboutMeComponent {
       role: 'Team Partner',
     },
     {
-      text: 'Daniel has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the succcess of our project.',
+      text: 'asdajskdqwiejqiwje asdjkajdkqiejk aksdjkdqjwiasdajdq',
       name: 'Peter Pansen',
       role: 'Senior Frontend Developer',
     },

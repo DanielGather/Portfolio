@@ -38,6 +38,7 @@
 }
 
 .active {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -50,4 +51,54 @@
   padding: 2rem;
   min-width: 750px;
   height: 250px;
+}
+
+.quotes {
+  position: absolute;
+  top: -10px;
+  left: -50px;
+}
+
+.notActive {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $font-fira;
+  font-size: 18px !important;
+  color: white;
+  background-color: #26524b;
+  border: 1px solid $main-color;
+  border-radius: 2rem;
+  padding: 2rem;
+  min-width: 750px;
+  height: 250px;
+  opacity: 0.6;
+  scale: 0.95;
+  filter: blur(2.5px);
+}
+
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  .svg-right {
+    transition: transform 0.3s ease-in-out;
+  }
+  .svg-left {
+    transition: transform 0.3s ease-in-out;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+  }
+  :hover {
+    cursor: pointer;
+    stroke: $main-color;
+    .svg-right {
+      transform: translateX(5px);
+    }
+    .svg-left {
+      transform: translateX(-5px);
+    }
+  }
 }
