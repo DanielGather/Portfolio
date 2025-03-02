@@ -4,7 +4,7 @@
     <div
       [ngStyle]="{ 'border-bottom': last ? borderColor : '' }"
       class="project"
-      (click)="openPopup(project)"
+      (click)="openPopup(project, featuredProjects)"
       (mouseenter)="hoverProject(project)"
       (mouseleave)="leaveHover(project)"
     >

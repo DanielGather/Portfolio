@@ -1,5 +1,5 @@
-<div class="full-pop-up-window">
-  <div class="pop-up-window">
+<div (click)="closePopUp($event, true)" class="full-pop-up-window">
+  <div (click)="closePopUp($event, false)" class="pop-up-window">
     <div class="left-container">
       <h2>01</h2>
       <p class="project-name">{{ popupProject?.projectName }}</p>
@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="right-container">
-      <div (click)="closePopUp()" class="close">
+      <div (click)="closePopUp($event, true)" class="close">
         <img
           src="./../../../../../assets/img/pop-up-window/close_small.webp"
           alt=""

@@ -18,6 +18,7 @@ export class ProjectComponent {
 
   activeProject: Projects | null = null;
   borderColor = '1px solid #3dcfb6';
+  shouldClose!: boolean;
 
   hoverProject(project: Projects) {
     project.hover = true;
@@ -27,12 +28,18 @@ export class ProjectComponent {
     project.hover = false;
   }
 
-  openPopup(project: Projects) {
+  openPopup(project: Projects, featuredProjects: any) {
+    console.log(project);
+    console.log(featuredProjects);
+
+    this.activeProject = null;
     this.activeProject = project;
     console.log(this.activeProject);
   }
 
-  closePopUp(close: null) {
-    this.activeProject = close;
+  closePopUp(shouldClose: boolean) {
+    if (shouldClose) {
+      this.activeProject = null;
+    }
   }
 }

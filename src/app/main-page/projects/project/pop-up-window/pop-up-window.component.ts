@@ -11,9 +11,10 @@ import { Projects } from '../projects';
 export class PopUpWindowComponent {
   @Input() popupProject!: Projects | null;
 
-  @Output() closeDialog = new EventEmitter<null>();
+  @Output() closeDialog = new EventEmitter<boolean>();
 
-  closePopUp() {
-    this.closeDialog.emit(null);
+  closePopUp(event: MouseEvent, shouldClose: boolean): void {
+    event.stopPropagation();
+    this.closeDialog.emit(shouldClose);
   }
 }
