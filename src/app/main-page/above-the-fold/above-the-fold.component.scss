@@ -78,6 +78,7 @@
   height: 48px;
   button {
     cursor: pointer;
+    padding: 0rem 1rem 0rem 1rem;
     border: 1px solid white;
     border-radius: 1.5rem;
     // padding: 0.75rem 0.5rem 0.75rem 0.5rem;
@@ -89,6 +90,7 @@
       text-shadow: 0 0 1px $main-color, 32ch 0 1px $main-color;
       font-family: $font-karla;
       font-size: 18px;
+      font-weight: 100;
     }
     overflow: hidden;
   }
@@ -170,5 +172,12 @@
     button {
       min-width: 100px;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .aboveTheFold {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
   }
 }

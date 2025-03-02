@@ -1,8 +1,16 @@
-import { Component, Input, ViewChild, ViewContainerRef } from '@angular/core';
+import {
+  Component,
+  Input,
+  ViewChild,
+  ViewContainerRef,
+  Renderer2,
+  Inject,
+} from '@angular/core';
 import { Projects } from './projects';
 import { NgStyle } from '@angular/common';
 import { PopUpWindowComponent } from './pop-up-window/pop-up-window.component';
 import { NgIf } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-project',
   standalone: true,
@@ -11,6 +19,10 @@ import { NgIf } from '@angular/common';
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
+  constructor(
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
   @ViewChild('popupContainer', { read: ViewContainerRef, static: true })
   container!: ViewContainerRef;
 
@@ -32,6 +44,7 @@ export class ProjectComponent {
 
   openPopup(index: number) {
     this.activeIndex = index;
+    this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
     this.activeProject = this.featuredProjects[index];
   }
 
@@ -39,6 +52,7 @@ export class ProjectComponent {
     if (shouldClose) {
       this.activeProject = null;
       this.activeIndex = -1;
+      this.renderer.removeStyle(this.document.body, 'overflow');
     }
   }
 
