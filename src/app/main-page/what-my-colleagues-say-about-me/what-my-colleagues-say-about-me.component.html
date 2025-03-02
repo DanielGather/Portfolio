@@ -1,1 +1,14 @@
-<p>what-my-colleagues-say-about-me works!</p>
+<div class="full-container">
+  <p>What my colleagues say about me</p>
+  <div class="feedback-container">
+    @for (feedback of reviews; track feedback){
+    <div [ngClass]="focus ? 'active' : 'notActive'">
+      <p>{{ feedback.text }}</p>
+      <div class="colleaguesName">
+        <div class="stroke"></div>
+        <p>{{ feedback.name }} - {{ feedback.role }}</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>
