@@ -13,8 +13,14 @@ export class PopUpWindowComponent {
 
   @Output() closeDialog = new EventEmitter<boolean>();
 
+  @Output() nextProject = new EventEmitter<boolean>();
+
   closePopUp(event: MouseEvent, shouldClose: boolean): void {
     event.stopPropagation();
     this.closeDialog.emit(shouldClose);
+  }
+
+  showNextProject() {
+    this.nextProject.emit();
   }
 }

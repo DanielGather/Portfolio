@@ -18,7 +18,9 @@ export class ProjectComponent {
 
   activeProject: Projects | null = null;
   borderColor = '1px solid #3dcfb6';
+  activeIndex: number = -1;
   shouldClose!: boolean;
+  nextProject!: boolean;
 
   hoverProject(project: Projects) {
     project.hover = true;
@@ -28,18 +30,25 @@ export class ProjectComponent {
     project.hover = false;
   }
 
-  openPopup(project: Projects, featuredProjects: any) {
-    console.log(project);
-    console.log(featuredProjects);
-
-    this.activeProject = null;
-    this.activeProject = project;
-    console.log(this.activeProject);
+  openPopup(index: number) {
+    this.activeIndex = index;
+    this.activeProject = this.featuredProjects[index];
   }
 
   closePopUp(shouldClose: boolean) {
     if (shouldClose) {
       this.activeProject = null;
+      this.activeIndex = -1;
+    }
+  }
+
+  showNextProject() {
+    if (this.activeIndex < this.featuredProjects.length - 1) {
+      this.activeIndex++; // Nächstes Projekt setzen
+      this.activeProject = this.featuredProjects[this.activeIndex];
+    } else {
+      this.activeProject = this.featuredProjects[0];
+      this.activeIndex = 0;
     }
   }
 }

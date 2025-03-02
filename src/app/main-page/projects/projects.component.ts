@@ -11,6 +11,7 @@ import { ProjectComponent } from './project/project.component';
 export class ProjectsComponent {
   Projects = [
     {
+      projectNumber: '01',
       projectName: 'Join',
       technologyUsed: [
         {
@@ -36,6 +37,7 @@ export class ProjectsComponent {
       imgProject: './../../../../assets/img/joinProject.webp',
     },
     {
+      projectNumber: '02',
       projectName: 'Sharkie',
       technologyUsed: [
         {
@@ -56,6 +58,7 @@ export class ProjectsComponent {
       imgProject: './../../../../assets/img/sharkieProject.webp',
     },
     {
+      projectNumber: '03',
       projectName: 'Sharkie',
       technologyUsed: [
         {

@@ -1,7 +1,7 @@
 <div (click)="closePopUp($event, true)" class="full-pop-up-window">
   <div (click)="closePopUp($event, false)" class="pop-up-window">
     <div class="left-container">
-      <h2>01</h2>
+      <h2>{{ popupProject?.projectNumber }}</h2>
       <p class="project-name">{{ popupProject?.projectName }}</p>
       <p class="about-project">What is this project about?</p>
       <p class="description">
@@ -57,7 +57,7 @@
         />
       </div>
       <img src="{{ popupProject?.imgProject }}" alt="" />
-      <div class="next-project">
+      <div (click)="showNextProject()" class="next-project">
         <p>Next project</p>
         <svg
           width="19"

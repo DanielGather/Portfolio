@@ -1,10 +1,11 @@
 <div class="all-projects">
   <div class="projects-container">
-    @for (project of featuredProjects; let last = $last; track project){
+    @for (project of featuredProjects;let index = $index; let last = $last;
+    track project){
     <div
       [ngStyle]="{ 'border-bottom': last ? borderColor : '' }"
       class="project"
-      (click)="openPopup(project, featuredProjects)"
+      (click)="openPopup(index)"
       (mouseenter)="hoverProject(project)"
       (mouseleave)="leaveHover(project)"
     >
@@ -47,6 +48,7 @@
     *ngIf="activeProject"
     [popupProject]="activeProject"
     (closeDialog)="closePopUp($event)"
+    (nextProject)="showNextProject()"
     #popupContainer
   ></app-pop-up-window>
 </div>
