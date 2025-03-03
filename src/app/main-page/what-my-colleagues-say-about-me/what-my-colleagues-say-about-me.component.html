@@ -2,13 +2,20 @@
   <p>What my colleagues say about me</p>
   <div class="feedback-container">
     @for (feedback of reviews; let index = $index; track feedback){
-    <div [ngClass]="index === 1 ? 'active' : 'notActive'">
+    <div
+      [ngClass]="[
+        index === activeIndex ? 'active' : 'notActive',
+        leftButtonIsClicked ? 'move-left' : '',
+        rightButtonIsClicked ? 'move-right' : '',
+        resetPosition ? 'reset-position' : ''
+      ]"
+    >
       <p>{{ feedback.text }}</p>
       <div class="colleaguesName">
         <div class="stroke"></div>
         <p>{{ feedback.name }} - {{ feedback.role }}</p>
       </div>
-      @if(index ===1){
+      @if(index === activeIndex){
       <svg
         class="quotes"
         width="90"
@@ -28,6 +35,7 @@
   <div class="slider-buttons">
     <button>
       <svg
+        (click)="moveLeft()"
         class="svg-left"
         width="19"
         height="20"
@@ -42,6 +50,7 @@
       </svg>
     </button>
     <svg
+      (click)="pointerLeft()"
       width="8"
       height="8"
       viewBox="0 0 8 8"
@@ -51,6 +60,7 @@
       <circle cx="4" cy="4" r="4" fill="white" />
     </svg>
     <svg
+      (click)="pointerMiddle()"
       width="8"
       height="8"
       viewBox="0 0 8 8"
@@ -60,6 +70,7 @@
       <circle cx="4" cy="4" r="4" fill="white" />
     </svg>
     <svg
+      (click)="pointerRight()"
       width="8"
       height="8"
       viewBox="0 0 8 8"
@@ -71,6 +82,7 @@
 
     <button>
       <svg
+        (click)="moveRight()"
         class="svg-right"
         width="19"
         height="20"

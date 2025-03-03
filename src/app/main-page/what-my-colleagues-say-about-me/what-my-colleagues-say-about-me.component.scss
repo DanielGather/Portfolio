@@ -51,6 +51,31 @@
   padding: 2rem;
   min-width: 750px;
   height: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.move-left {
+  transition: transform 0.3s ease-in-out;
+}
+
+.move-left {
+  transform: translateX(798px);
+}
+
+.move-right {
+  transition: transform 0.3s ease-in-out;
+}
+
+.move-right {
+  transform: translateX(-798px);
+}
+
+.reset-position {
+  transition: transform 0.3s ease-in-out;
+}
+
+.reset-position {
+  transform: translateX(0px);
 }
 
 .quotes {
