@@ -50,34 +50,34 @@
       </svg>
     </button>
     <svg
-      (click)="pointerLeft()"
+      (click)="pointerLeft($event, 'pointLeft')"
       width="8"
       height="8"
       viewBox="0 0 8 8"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="4" cy="4" r="4" fill="white" />
+      <circle #pointLeft cx="4" cy="4" r="4" fill="white" />
     </svg>
     <svg
-      (click)="pointerMiddle()"
+      (click)="pointerMiddle($event, 'pointMiddle')"
       width="8"
       height="8"
       viewBox="0 0 8 8"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="4" cy="4" r="4" fill="white" />
+      <circle #pointMiddle cx="4" cy="4" r="4" fill="white" />
     </svg>
     <svg
-      (click)="pointerRight()"
+      (click)="pointerRight($event, 'pointRight')"
       width="8"
       height="8"
       viewBox="0 0 8 8"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="4" cy="4" r="4" fill="white" />
+      <circle #pointRight cx="4" cy="4" r="4" fill="white" />
     </svg>
 
     <button>
