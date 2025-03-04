@@ -12,3 +12,11 @@
     font-size: 64px;
   }
 }
+
+@media (max-width: 400px) {
+  .projects {
+    h2 {
+      font-size: 54px;
+    }
+  }
+}

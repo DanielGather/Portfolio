@@ -27,13 +27,13 @@ export class WhatMyColleaguesSayAboutMeComponent {
   reviews = [
     {
       text: 'Daniel has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the succcess of our project.',
-      name: 'Rodger Bongartz',
+      name: 'R.Bongartz',
       role: 'Team Partner',
     },
     {
       text: 'asdajskdqwiejqiwje asdjkajdkqiejk aksdjkdqjwiasdajdq',
-      name: 'Peter Pansen',
-      role: 'Senior Frontend Developer',
+      name: 'P.Pansen',
+      role: 'Developer',
     },
     {
       text: 'Daniel has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the succcess of our project.',
@@ -46,11 +46,19 @@ export class WhatMyColleaguesSayAboutMeComponent {
     if (this.rightButtonIsClicked) {
       this.rightButtonIsClicked = false;
       this.resetPosition = true;
+      this.handlePointerColor('pointMiddle');
     } else if (!this.rightButtonIsClicked && this.resetPosition) {
       this.resetPosition = false;
       this.leftButtonIsClicked = true;
+      this.handlePointerColor('pointLeft');
+    } else if (
+      !this.leftButtonIsClicked &&
+      !this.rightButtonIsClicked &&
+      !this.resetPosition
+    ) {
+      this.leftButtonIsClicked = true;
+      this.handlePointerColor('pointLeft');
     }
-    this.leftButtonIsClicked = true;
     if (this.activeIndex > 0) {
       this.activeIndex -= 1;
     }
@@ -65,8 +73,14 @@ export class WhatMyColleaguesSayAboutMeComponent {
       this.resetPosition = false;
       this.rightButtonIsClicked = true;
       this.handlePointerColor('pointRight');
+    } else if (
+      !this.resetPosition &&
+      !this.leftButtonIsClicked &&
+      !this.rightButtonIsClicked
+    ) {
+      this.handlePointerColor('pointRight');
+      this.rightButtonIsClicked = true;
     }
-    this.rightButtonIsClicked = true;
     if (this.activeIndex < this.reviews.length - 1) {
       this.activeIndex += 1;
     }
@@ -74,9 +88,13 @@ export class WhatMyColleaguesSayAboutMeComponent {
 
   pointerLeft(event: Event, point: string) {
     this.handlePointerColor(point);
-    this.rightButtonIsClicked = false;
     this.resetPosition = false;
-    this.activeIndex--;
+    if (this.rightButtonIsClicked) {
+      this.activeIndex -= 2;
+    } else {
+      this.activeIndex--;
+    }
+    this.rightButtonIsClicked = false;
     this.leftButtonIsClicked = true;
   }
 
@@ -90,9 +108,13 @@ export class WhatMyColleaguesSayAboutMeComponent {
   /*************  ✨ Codeium Command 🌟  *************/
   pointerRight(event: Event, point: string) {
     this.handlePointerColor(point);
-    this.leftButtonIsClicked = false;
     this.resetPosition = false;
-    this.activeIndex++;
+    if (this.leftButtonIsClicked) {
+      this.activeIndex += 2;
+    } else {
+      this.activeIndex++;
+    }
+    this.leftButtonIsClicked = false;
     this.rightButtonIsClicked = true;
   }
   /******  145370a1-d6ae-4ef9-a3f2-634c98ebf436  *******/
