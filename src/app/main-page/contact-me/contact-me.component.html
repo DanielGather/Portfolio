@@ -1,5 +1,5 @@
-<div>
-  <div>
+<div class="container">
+  <div class="left-container">
     <p>Contact me</p>
     <h2>Let's work together</h2>
     <p>Got a problem to solve?</p>
@@ -7,22 +7,30 @@
       Encourage people to contact you and describe what role you are interested
       in. Show that you will add value to their projects through your work.
     </p>
-    <p>Need a Frontend Developer? Let's talk!</p>
+    <br />
+    <p>Need a Frontend Developer? <span>Let's talk!</span></p>
   </div>
-  <div>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <label for="name">What's your name</label>
+  <div class="right-container">
+    <form
+      class="form-container"
+      (ngSubmit)="onSubmit(contactForm)"
+      #contactForm="ngForm"
+    >
+      <label for="name"><span>What's your name</span></label>
       <input
+        #nameInput
         [(ngModel)]="contactData.name"
         type="text"
         id="name"
         name="name"
-        placeholder="Your name goes here"
+        [placeholder]="yourName"
+        (blur)="checkNameInput()"
         required
       />
 
-      <label for="email">What's your email?</label>
+      <label for="email"><span>What's your email?</span></label>
       <input
+        #emailInput
         [(ngModel)]="contactData.email"
         type="email"
         id="email"
@@ -32,8 +40,9 @@
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
       />
 
-      <label for="message">How can I help you?</label>
+      <label for="message"><span>How can I help you</span>?</label>
       <textarea
+        #textAreaInput
         [(ngModel)]="contactData.message"
         #message="ngModel"
         name="message"
@@ -44,7 +53,24 @@
       @if (!message.valid && message.touched){
       <span>Please enter a message</span>
       }
-      <input type="submit" value="submit" />
+      <label class="checkbox-container">
+        <input
+          class="checkbox"
+          type="checkbox"
+          id="meine-checkbox"
+          [(ngModel)]="privacyAccepted"
+          name="privacyPolicy"
+        />
+        <span class="custom-checkbox"></span>
+        <p>
+          I've read the
+          <span>privacy policy</span>
+          and agree to the processing of my data as outlinded.
+        </p>
+      </label>
+      <button type="submit" [disabled]="!privacyAccepted">
+        <p>Say Hello :)</p>
+      </button>
     </form>
   </div>
 </div>

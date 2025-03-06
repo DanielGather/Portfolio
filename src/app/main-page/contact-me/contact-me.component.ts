@@ -1,6 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Renderer2 } from '@angular/core';
+import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-contact-me',
@@ -10,7 +12,26 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact-me.component.scss',
 })
 export class ContactMeComponent {
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+  @ViewChild('nameInput') nameInput!: ElementRef;
+  @ViewChild('emailInput') emailInput!: ElementRef;
+  @ViewChild('textAreaInput') textAreaInput!: ElementRef;
+  privacyAccepted = false;
+
+  yourName: string = 'Your name goes here';
+
   http = inject(HttpClient);
+
+  checkNameInput() {
+    if (this.nameInput.nativeElement.value == '') {
+      this.yourName = 'Your name is missing';
+      this.renderer.addClass(this.nameInput.nativeElement, 'empty');
+    } else {
+      this.renderer.removeClass(this.nameInput.nativeElement, 'empty');
+    }
+    console.log('test', this.nameInput.nativeElement.value);
+  }
 
   contactData = {
     name: '',
