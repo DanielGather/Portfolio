@@ -18,10 +18,10 @@ export class ContactMeComponent {
     message: '',
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://daniel-gather.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
