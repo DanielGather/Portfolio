@@ -17,6 +17,7 @@ export class ContactMeComponent {
   @ViewChild('nameInput') nameInput!: ElementRef;
   @ViewChild('emailInput') emailInput!: ElementRef;
   @ViewChild('textAreaInput') textAreaInput!: ElementRef;
+
   privacyAccepted = false;
 
   yourName: string = 'Your name goes here';
