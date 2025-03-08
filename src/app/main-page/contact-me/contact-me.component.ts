@@ -25,11 +25,17 @@ export class ContactMeComponent {
   @ViewChild('emailModel') emailInputNgModel!: NgModel;
   @ViewChild('textareaModel') textAreaInputNgModel!: NgModel;
 
+  ngAfterViewInit() {}
+
   privacyAccepted = false;
 
   mailIsValid: boolean = true;
   nameIsValid: boolean = true;
   textareaIsValid: boolean = true;
+
+  nameRef!: ElementRef;
+  emailRef!: ElementRef;
+  textareaRef!: ElementRef;
 
   yourName: string = 'Your name goes here';
 
@@ -37,6 +43,7 @@ export class ContactMeComponent {
 
   checkNameInput() {
     if (!this.nameInputNgModel.valid) {
+      this.nameRef = this.nameInputRef;
       this.nameIsValid = false;
     }
   }
@@ -53,12 +60,16 @@ export class ContactMeComponent {
     }
   }
 
-  switchToInput() {
-    this.nameIsValid = true;
-    this.mailIsValid = true;
-    this.textareaIsValid = true;
+  switchToInput(ref: String) {
+    if (ref == 'name') {
+      this.nameIsValid = true;
+    } else if (ref == 'mail') {
+      this.mailIsValid = true;
+    } else if (ref == 'textarea') {
+      this.textareaIsValid = true;
+    }
     // setTimeout(() => {
-    //   this.emailInputRef.nativeElement.focus();
+    //   this.nameInputRef.nativeElement.focus();
     // }, 125);
   }
 

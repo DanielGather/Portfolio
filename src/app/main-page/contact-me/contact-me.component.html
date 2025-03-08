@@ -30,7 +30,10 @@
         minlength="2"
         required
       />
-      <span (click)="switchToInput()" class="notValid" *ngIf="!nameIsValid"
+      <span
+        (click)="switchToInput('name')"
+        class="notValid"
+        *ngIf="!nameIsValid"
         >Please enter your name</span
       >
 
@@ -48,7 +51,10 @@
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         (blur)="checkMailInput()"
       />
-      <span (click)="switchToInput()" class="notValid" *ngIf="!mailIsValid"
+      <span
+        (click)="switchToInput('mail')"
+        class="notValid"
+        *ngIf="!mailIsValid"
         >Hoppla! your email is required</span
       >
       <label for="message"><p>How can I help you?</p> </label>
@@ -65,7 +71,10 @@
         minlength="5"
         (blur)="checkTextAreaInput()"
       ></textarea>
-      <span (click)="switchToInput()" class="notValid" *ngIf="!textareaIsValid"
+      <span
+        (click)="switchToInput('textarea')"
+        class="notValid"
+        *ngIf="!textareaIsValid"
         >What do you need to develop?</span
       >
       <label class="checkbox-container">
