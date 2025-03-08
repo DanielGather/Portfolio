@@ -7,7 +7,6 @@ import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-contact-me',
-  standalone: true,
   imports: [FormsModule, NgIf],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss',

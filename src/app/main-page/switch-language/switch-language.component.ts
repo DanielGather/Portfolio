@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-switch-language',
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: './switch-language.component.html',
-  styleUrl: './switch-language.component.scss',
+    selector: 'app-switch-language',
+    imports: [NgClass],
+    templateUrl: './switch-language.component.html',
+    styleUrl: './switch-language.component.scss'
 })
 export class SwitchLanguageComponent {
   en: boolean = true;

@@ -18,7 +18,6 @@
     >
       <label for="name"><p>What's your name</p></label>
       <input
-        *ngIf="nameIsValid; else elseBlock"
         #nameModel="ngModel"
         #nameRef
         [(ngModel)]="contactData.name"
@@ -27,7 +26,11 @@
         name="name"
         [class]="nameIsValid ? '' : 'placeholderRed'"
         [placeholder]="yourName"
-        (blur)="nameModel.valid ? (nameIsValid = true) : (nameIsValid = false)"
+        (blur)="
+          nameModel.valid ? (nameIsValid = true) : (nameIsValid = false);
+          nameRef.placeholder = 'Please enter your name';
+          nameRef.value = ''
+        "
         minlength="2"
         required
       />

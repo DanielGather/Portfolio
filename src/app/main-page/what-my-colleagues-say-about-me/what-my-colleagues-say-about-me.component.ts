@@ -5,11 +5,10 @@ import { Renderer2 } from '@angular/core';
 import { ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-what-my-colleagues-say-about-me',
-  standalone: true,
-  imports: [NgClass, NgStyle],
-  templateUrl: './what-my-colleagues-say-about-me.component.html',
-  styleUrl: './what-my-colleagues-say-about-me.component.scss',
+    selector: 'app-what-my-colleagues-say-about-me',
+    imports: [NgClass, NgStyle],
+    templateUrl: './what-my-colleagues-say-about-me.component.html',
+    styleUrl: './what-my-colleagues-say-about-me.component.scss'
 })
 export class WhatMyColleaguesSayAboutMeComponent {
   constructor(private renderer: Renderer2, private el: ElementRef) {}

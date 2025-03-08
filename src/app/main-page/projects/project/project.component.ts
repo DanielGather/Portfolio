@@ -12,11 +12,10 @@ import { PopUpWindowComponent } from './pop-up-window/pop-up-window.component';
 import { NgIf } from '@angular/common';
 import { DOCUMENT } from '@angular/common';
 @Component({
-  selector: 'app-project',
-  standalone: true,
-  imports: [NgStyle, PopUpWindowComponent, NgIf],
-  templateUrl: './project.component.html',
-  styleUrl: './project.component.scss',
+    selector: 'app-project',
+    imports: [NgStyle, PopUpWindowComponent, NgIf],
+    templateUrl: './project.component.html',
+    styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
   constructor(
