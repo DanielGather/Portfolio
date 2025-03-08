@@ -16,21 +16,29 @@
       (ngSubmit)="onSubmit(contactForm)"
       #contactForm="ngForm"
     >
-      <label for="name"><span>What's your name</span></label>
+      <label for="name"><p>What's your name</p></label>
       <input
-        #nameInput
+        *ngIf="nameIsValid"
+        #nameModel="ngModel"
+        #nameRef
         [(ngModel)]="contactData.name"
         type="text"
         id="name"
         name="name"
         [placeholder]="yourName"
         (blur)="checkNameInput()"
+        minlength="2"
         required
       />
+      <span (click)="switchToInput()" class="notValid" *ngIf="!nameIsValid"
+        >Please enter your name</span
+      >
 
-      <label for="email"><span>What's your email?</span></label>
+      <label for="email"><p>What's your email?</p></label>
       <input
-        #emailInput
+        *ngIf="mailIsValid"
+        #emailRef
+        #emailModel="ngModel"
         [(ngModel)]="contactData.email"
         type="email"
         id="email"
@@ -38,21 +46,28 @@
         placeholder="youremail@email.com"
         required
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        (blur)="checkMailInput()"
       />
-
-      <label for="message"><span>How can I help you</span>?</label>
+      <span (click)="switchToInput()" class="notValid" *ngIf="!mailIsValid"
+        >Hoppla! your email is required</span
+      >
+      <label for="message"><p>How can I help you?</p> </label>
       <textarea
-        #textAreaInput
+        *ngIf="textareaIsValid"
+        #textareaRef
+        #textareaModel="ngModel"
         [(ngModel)]="contactData.message"
         #message="ngModel"
         name="message"
         id="message"
         placeholder="Hello Daniel, I am interested in..."
         required
+        minlength="5"
+        (blur)="checkTextAreaInput()"
       ></textarea>
-      @if (!message.valid && message.touched){
-      <span>Please enter a message</span>
-      }
+      <span (click)="switchToInput()" class="notValid" *ngIf="!textareaIsValid"
+        >What do you need to develop?</span
+      >
       <label class="checkbox-container">
         <input
           class="checkbox"

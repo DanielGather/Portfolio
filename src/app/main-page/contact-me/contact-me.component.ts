@@ -1,38 +1,68 @@
 import { Component, inject, ViewChild } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Renderer2 } from '@angular/core';
 import { ElementRef } from '@angular/core';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss',
 })
 export class ContactMeComponent {
   constructor(private renderer: Renderer2, private el: ElementRef) {}
 
-  @ViewChild('nameInput') nameInput!: ElementRef;
-  @ViewChild('emailInput') emailInput!: ElementRef;
   @ViewChild('textAreaInput') textAreaInput!: ElementRef;
 
+  @ViewChild('nameRef') nameInputRef!: ElementRef;
+  @ViewChild('emailRef') emailInputRef!: ElementRef;
+  @ViewChild('textAreaRef') textAreaInputRef!: ElementRef;
+
+  @ViewChild('nameModel') nameInputNgModel!: NgModel;
+  @ViewChild('emailModel') emailInputNgModel!: NgModel;
+  @ViewChild('textareaModel') textAreaInputNgModel!: NgModel;
+
   privacyAccepted = false;
+
+  mailIsValid: boolean = true;
+  nameIsValid: boolean = true;
+  textareaIsValid: boolean = true;
 
   yourName: string = 'Your name goes here';
 
   http = inject(HttpClient);
 
   checkNameInput() {
-    if (this.nameInput.nativeElement.value == '') {
-      this.yourName = 'Your name is missing';
-      this.renderer.addClass(this.nameInput.nativeElement, 'empty');
-    } else {
-      this.renderer.removeClass(this.nameInput.nativeElement, 'empty');
+    if (!this.nameInputNgModel.valid) {
+      this.nameIsValid = false;
     }
-    console.log('test', this.nameInput.nativeElement.value);
   }
+
+  checkMailInput() {
+    if (!this.emailInputNgModel.valid) {
+      this.mailIsValid = false;
+    }
+  }
+
+  checkTextAreaInput() {
+    if (!this.textAreaInputNgModel.valid) {
+      this.textareaIsValid = false;
+    }
+  }
+
+  switchToInput() {
+    this.nameIsValid = true;
+    this.mailIsValid = true;
+    this.textareaIsValid = true;
+    // setTimeout(() => {
+    //   this.emailInputRef.nativeElement.focus();
+    // }, 125);
+  }
+
+  checkEmail() {}
 
   contactData = {
     name: '',
