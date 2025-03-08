@@ -18,23 +18,24 @@
     >
       <label for="name"><p>What's your name</p></label>
       <input
-        *ngIf="nameIsValid"
+        *ngIf="nameIsValid; else elseBlock"
         #nameModel="ngModel"
         #nameRef
         [(ngModel)]="contactData.name"
         type="text"
         id="name"
         name="name"
+        [class]="nameIsValid ? '' : 'placeholderRed'"
         [placeholder]="yourName"
-        (blur)="checkNameInput()"
+        (blur)="nameModel.valid ? (nameIsValid = true) : (nameIsValid = false)"
         minlength="2"
         required
       />
-      <span
-        (click)="switchToInput('name')"
+      <ng-template
+        #elseBlock
+        (click)="nameIsValid = true && nameRef().nativeElement.focus()"
         class="notValid"
-        *ngIf="!nameIsValid"
-        >Please enter your name</span
+        >Please enter your name</ng-template
       >
 
       <label for="email"><p>What's your email?</p></label>

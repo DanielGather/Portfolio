@@ -36,6 +36,10 @@
   }
 }
 
+.placeholderRed::placeholder {
+  color: red;
+}
+
 .right-container {
   width: 50%;
   display: flex;

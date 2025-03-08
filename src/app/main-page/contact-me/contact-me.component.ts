@@ -1,4 +1,4 @@
-import { Component, inject, ViewChild } from '@angular/core';
+import { Component, inject, viewChild, ViewChild } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Renderer2 } from '@angular/core';
@@ -13,19 +13,21 @@ import { NgIf } from '@angular/common';
   styleUrl: './contact-me.component.scss',
 })
 export class ContactMeComponent {
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
+  constructor(private renderer: Renderer2, el: ElementRef) {}
 
-  @ViewChild('textAreaInput') textAreaInput!: ElementRef;
+  // @ViewChild('textAreaInput') textAreaInput!: ElementRef;
 
-  @ViewChild('nameRef') nameInputRef!: ElementRef;
-  @ViewChild('emailRef') emailInputRef!: ElementRef;
-  @ViewChild('textAreaRef') textAreaInputRef!: ElementRef;
+  nameRef = viewChild.required<ElementRef>('nameRef');
+  emailRef = viewChild.required<ElementRef>('emailRef');
+  textAreaRef = viewChild.required<ElementRef>('textareaRef');
 
-  @ViewChild('nameModel') nameInputNgModel!: NgModel;
-  @ViewChild('emailModel') emailInputNgModel!: NgModel;
-  @ViewChild('textareaModel') textAreaInputNgModel!: NgModel;
+  nameInputNgModel = viewChild.required<NgModel>('nameModel');
+  emailInputNgModel = viewChild.required<NgModel>('emailModel');
+  textAreaInputNgModel = viewChild.required<NgModel>('textareaModel');
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+    this.nameRef();
+  }
 
   privacyAccepted = false;
 
@@ -33,44 +35,42 @@ export class ContactMeComponent {
   nameIsValid: boolean = true;
   textareaIsValid: boolean = true;
 
-  nameRef!: ElementRef;
-  emailRef!: ElementRef;
-  textareaRef!: ElementRef;
-
   yourName: string = 'Your name goes here';
 
   http = inject(HttpClient);
 
   checkNameInput() {
-    if (!this.nameInputNgModel.valid) {
-      this.nameRef = this.nameInputRef;
+    if (!this.nameInputNgModel().valid) {
+      // this.nameRef = this.nameInputRef;
       this.nameIsValid = false;
     }
   }
 
   checkMailInput() {
-    if (!this.emailInputNgModel.valid) {
+    if (!this.emailInputNgModel().valid) {
       this.mailIsValid = false;
     }
   }
 
   checkTextAreaInput() {
-    if (!this.textAreaInputNgModel.valid) {
+    if (!this.textAreaInputNgModel().valid) {
       this.textareaIsValid = false;
     }
   }
 
-  switchToInput(ref: String) {
+  switchToInput<T>(ref: T) {
+    let reference: ElementRef;
     if (ref == 'name') {
       this.nameIsValid = true;
+      reference = this.nameRef();
     } else if (ref == 'mail') {
       this.mailIsValid = true;
     } else if (ref == 'textarea') {
       this.textareaIsValid = true;
     }
-    // setTimeout(() => {
-    //   this.nameInputRef.nativeElement.focus();
-    // }, 125);
+    setTimeout(() => {
+      reference.nativeElement.focus();
+    }, 125);
   }
 
   checkEmail() {}
