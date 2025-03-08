@@ -17,29 +17,26 @@
       #contactForm="ngForm"
     >
       <label for="name"><p>What's your name</p></label>
-      <input
-        #nameModel="ngModel"
-        #nameRef
-        [(ngModel)]="contactData.name"
-        type="text"
-        id="name"
-        name="name"
-        [class]="nameIsValid ? '' : 'placeholderRed'"
-        [placeholder]="yourName"
-        (blur)="
-          nameModel.valid ? (nameIsValid = true) : (nameIsValid = false);
-          nameRef.placeholder = 'Please enter your name';
-          nameRef.value = ''
-        "
-        minlength="2"
-        required
-      />
-      <ng-template
-        #elseBlock
-        (click)="nameIsValid = true && nameRef().nativeElement.focus()"
-        class="notValid"
-        >Please enter your name</ng-template
-      >
+      <div>
+        <input
+          #nameModel="ngModel"
+          #nameRef
+          [(ngModel)]="contactData.name"
+          type="text"
+          id="name"
+          name="name"
+          [class]="nameIsValid ? '' : 'placeholderRed'"
+          [placeholder]="yourName"
+          (blur)="!nameModel.valid ? (applyUserNotification = true) : ''"
+          minlength="2"
+          required
+        />
+        @if(applyUserNotification){
+        <div (click)="applyUserNotification = false" class="notValid">
+          Please enter your name
+        </div>
+        }
+      </div>
 
       <label for="email"><p>What's your email?</p></label>
       <input
@@ -53,7 +50,7 @@
         placeholder="youremail@email.com"
         required
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-        (blur)="checkMailInput()"
+        (blur)="(emailRef)"
       />
       <span
         (click)="switchToInput('mail')"

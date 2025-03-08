@@ -1,4 +1,11 @@
-import { Component, inject, viewChild, ViewChild } from '@angular/core';
+import {
+  Component,
+  inject,
+  OnInit,
+  AfterViewInit,
+  viewChild,
+  ViewChild,
+} from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Renderer2 } from '@angular/core';
@@ -11,9 +18,9 @@ import { NgIf } from '@angular/common';
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss',
 })
-export class ContactMeComponent {
+export class ContactMeComponent implements AfterViewInit {
   constructor(private renderer: Renderer2, el: ElementRef) {}
-
+  applyUserNotification = false;
   // @ViewChild('textAreaInput') textAreaInput!: ElementRef;
 
   nameRef = viewChild.required<ElementRef>('nameRef');
@@ -37,42 +44,6 @@ export class ContactMeComponent {
   yourName: string = 'Your name goes here';
 
   http = inject(HttpClient);
-
-  checkNameInput() {
-    if (!this.nameInputNgModel().valid) {
-      // this.nameRef = this.nameInputRef;
-      this.nameIsValid = false;
-    }
-  }
-
-  checkMailInput() {
-    if (!this.emailInputNgModel().valid) {
-      this.mailIsValid = false;
-    }
-  }
-
-  checkTextAreaInput() {
-    if (!this.textAreaInputNgModel().valid) {
-      this.textareaIsValid = false;
-    }
-  }
-
-  switchToInput<T>(ref: T) {
-    let reference: ElementRef;
-    if (ref == 'name') {
-      this.nameIsValid = true;
-      reference = this.nameRef();
-    } else if (ref == 'mail') {
-      this.mailIsValid = true;
-    } else if (ref == 'textarea') {
-      this.textareaIsValid = true;
-    }
-    setTimeout(() => {
-      reference.nativeElement.focus();
-    }, 125);
-  }
-
-  checkEmail() {}
 
   contactData = {
     name: '',
