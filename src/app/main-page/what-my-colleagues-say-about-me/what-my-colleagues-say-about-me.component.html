@@ -1,5 +1,8 @@
 <div class="full-container">
-  <p>What my colleagues say about me</p>
+  <p>
+    {{ "whatPeopleSayAboutMe.title" | translate }}What my colleagues say about
+    me
+  </p>
   <div class="feedback-container">
     @for (feedback of reviews; let index = $index; track feedback){
     <div
@@ -10,7 +13,9 @@
         resetPosition ? 'reset-position' : ''
       ]"
     >
-      <p>{{ feedback.text }}</p>
+      <p>
+        {{ "whatPeopleSayAboutMe." + index | translate }}
+      </p>
       <div class="colleaguesName">
         <div class="stroke"></div>
         <p>{{ feedback.name }} - {{ feedback.role }}</p>

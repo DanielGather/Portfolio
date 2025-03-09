@@ -1,0 +1,49 @@
+{
+	"aboutMeComponent": {
+		"aboutMe": "Hi, I'm a german speaking\n        Frontend Developer based in Mönchengladbach. Motivated by the limitless\n        opportunities within IT, I am exited about crafting visually captivating\n        and intuitive websites and applicatinons.",
+		"basedIn": "Flexible in terms of working environments, I can work effectively both\n          on-site in Mönchengladbach and remotely.",
+		"challenges": "I am open-minded and always looking for personal challenges to\n          constantly improve my knowledge and skills.",
+		"description": "Im my profession, programming isn't just about writing code; it's a\n          creative from of probem-solving. I take pride in my ability to distill\n          complex technical challenges into simple, user-friendly solutions.\n          This way, I help you achieve your goals and bring your vison to life.",
+		"title": "About me",
+		"whoIAm": "Who I Am"
+	},
+	"aboveTheFold": {
+		"checkMyWork": "Check my work",
+		"contactMe": "Contact me",
+		"frontendDeveloper": "Frontend Developer"
+	},
+	"banner": {
+		"basedIn": "Based in Mönchengladbach",
+		"FrontendDeveloper": "Frontend Developer",
+		"openToWork": "Open to work",
+		"remote": "Available for remote work"
+	},
+	"footer": {
+		"developer": "Web developer",
+		"legalNotice": "Legal Notice"
+	},
+	"header": {
+		"aboutMe": "About me",
+		"projects": "Projects",
+		"skills": "Skills"
+	},
+	"projects": {
+		"description": "Explore a selection of my work  here - interact with projects to see my skills in action.",
+		"featuredProjects": "Featured Projects"
+	},
+	"skills": {
+		"anotherSkill": "another skill?",
+		"contactMe": "Feel free to contact me. I look\n        forward to expanding on my previous knowledge.",
+		"description": "I have gained extensive experience working with HTML, CSS, JavaScript, TypeScript, and Angular, enabling me to create modern, responsive web applications. My broad skill set in front-end development empowers me to deliver creative solutions while adapting flexibly to the ever-evolving demands of the web. I place great importance on continuous learning and quickly embracing new technologies to stay ahead in this rapidly changing industry.",
+		"letsTalk": "Let's Talk",
+		"needAnotherSkill": "You need",
+		"skillSet": "Skill set",
+		"technologies": "Technlogies"
+	},
+	"whatPeopleSayAboutMe": {
+		"0": "Daniel has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the succcess of our project.",
+		"1": "asdajskdqwiejqiwje asdjkajdkqiejk aksdjkdqjwiasdajdq",
+		"2": "JohahaPedohaha",
+		"title": "What my colleagues say about\n    me"
+	}
+}

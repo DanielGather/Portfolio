@@ -12,7 +12,7 @@
   <div class="left-container">
     <svg
       width="30"
-      height="48"
+      height="52"
       viewBox="0 0 30 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -50,17 +50,26 @@
   </div>
   <!-- @if(!responsive){ -->
   <div class="middle-container">
-    <h2>Frontend Developer</h2>
+    <h2>{{ "aboveTheFold.frontendDeveloper" | translate }}</h2>
     <h1>Daniel Gather</h1>
     <div class="buttons">
-      <button><p>Check my work</p></button>
-      <button><p>Contact me</p></button>
+      <button>
+        <p>{{ "aboveTheFold.checkMyWork" | translate }}</p>
+      </button>
+      <button>
+        <p>{{ "aboveTheFold.contactMe" | translate }}</p>
+      </button>
     </div>
   </div>
   <!-- } -->
   <div class="right-container">
-    <p class="fullMail">gather.daniel&#64;yahoo.de</p>
-    <a class="mail" target="_blank" href="https://github.com/DanielGather">
+    <a href="#contactMe" class="fullMail">gather.daniel&#64;yahoo.de</a>
+    <a
+      href="#contactMe"
+      class="mail"
+      target="_blank"
+      href="https://github.com/DanielGather"
+    >
       <img
         (mouseover)="changeImage('mail')"
         (mouseleave)="resetImage('mail')"

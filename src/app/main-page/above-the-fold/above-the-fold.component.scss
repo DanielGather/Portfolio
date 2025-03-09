@@ -51,11 +51,14 @@
     height: 32px;
     // padding-left: 16px;
   }
-  p {
+  a:first-of-type {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    text-decoration: none;
+    color: white;
   }
-  :hover {
+
+  a:hover {
     color: $main-color;
   }
   img {

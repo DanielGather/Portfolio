@@ -16,7 +16,7 @@
       <div class="technologies">
         @for (tech of project.technologyUsed; let last = $last; track tech ){
 
-        <p>{{ tech.technology }}</p>
+        <p>{{ tech.technology | translate }}</p>
         @if(!last){
         <div>|</div>
         } }

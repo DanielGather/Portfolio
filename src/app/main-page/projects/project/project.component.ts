@@ -11,17 +11,24 @@ import { NgStyle } from '@angular/common';
 import { PopUpWindowComponent } from './pop-up-window/pop-up-window.component';
 import { NgIf } from '@angular/common';
 import { DOCUMENT } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
-    selector: 'app-project',
-    imports: [NgStyle, PopUpWindowComponent, NgIf],
-    templateUrl: './project.component.html',
-    styleUrl: './project.component.scss'
+  selector: 'app-project',
+  imports: [NgStyle, PopUpWindowComponent, NgIf, TranslateModule],
+  templateUrl: './project.component.html',
+  styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
   constructor(
+    private translate: TranslateService,
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document
-  ) {}
+  ) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
   @ViewChild('popupContainer', { read: ViewContainerRef, static: true })
   container!: ViewContainerRef;
 

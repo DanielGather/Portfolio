@@ -1,10 +1,9 @@
-<div class="projects">
+<div id="projects" class="projects">
   <div>
     <p>Portfolio</p>
-    <h2>Featured Projects</h2>
+    <h2>{{ "projects.featuredProjects" | translate }}</h2>
     <p style="color: white; font-size: 18px">
-      Explore a selection of my work here - interact with <br />projects to see
-      my skills in action.
+      {{ "projects.description" | translate }}
     </p>
   </div>
   <app-project [featuredProjects]="Projects"></app-project>

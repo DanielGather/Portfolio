@@ -1,0 +1,49 @@
+{
+	"aboutMeComponent": {
+		"aboutMe": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Mönchengladbach. Angetrieben von den grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Websites und Anwendungen zu gestalten.",
+		"basedIn": "Flexibel in Bezug auf Arbeitsumgebungen kann ich sowohl vor Ort in Mönchengladbach als auch in remote effektiv arbeiten.",
+		"challenges": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
+		"description": "Beim Programmieren geht es nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
+		"title": "Über mich",
+		"whoIAm": "Wer bin ich"
+	},
+	"aboveTheFold": {
+		"checkMyWork": "Meine Projekte",
+		"contactMe": "Kontaktiere mich",
+		"frontendDeveloper": "Frontend Entwickler"
+	},
+	"banner": {
+		"basedIn": "Ansässig in Mönchengladbach",
+		"FrontendDeveloper": "Frontend Entwickler",
+		"openToWork": "Offen für Arbeit",
+		"remote": "Verfügbar für Telearbeit"
+	},
+	"footer": {
+		"developer": "Webentwickler",
+		"legalNotice": "Impressum"
+	},
+	"header": {
+		"aboutMe": "Über mich",
+		"projects": "Projekte",
+		"skills": "Fähigkeiten"
+	},
+	"projects": {
+		"description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+		"featuredProjects": "Ausgewählte Projekte"
+	},
+	"skills": {
+		"anotherSkill": "eine andere Fähigkeit?",
+		"contactMe": "Sie können mich gerne kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+		"description": "Ich habe fundierte Erfahrungen mit HTML, CSS, JavaScript, TypeScript und Angular gesammelt, wodurch ich in der Lage bin, moderne, responsive Webanwendungen zu entwickeln. Mein breites Skillset im Front-End-Bereich ermöglicht es mir, kreative Lösungen zu realisieren und flexibel auf die sich ständig wandelnden Anforderungen der Webentwicklung zu reagieren. Dabei lege ich großen Wert auf kontinuierliche Weiterbildung und die schnelle Anpassung an neue Technologien, um stets am Puls der Zeit zu bleiben.",
+		"letsTalk": "Lassen Sie uns reden",
+		"needAnotherSkill": "Sie benötigen",
+		"skillSet": "Fähigkeiten",
+		"technologies": "Technlogien"
+	},
+	"whatPeopleSayAboutMe": {
+		"0": "Daniel hat sich als zuverlässiger Teamkollege erwiesen. Seine technischen Fähigkeiten und seine proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
+		"1": "asdajskdqwiejqiwje asdjkajdkqiejk aksdjkdqjwiasdajdq",
+		"2": "JohahaPedohaha",
+		"title": "Was meine Kollegen über mich sagen"
+	}
+}

@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-projects',
-    imports: [ProjectComponent],
-    templateUrl: './projects.component.html',
-    styleUrl: './projects.component.scss'
+  selector: 'app-projects',
+  imports: [ProjectComponent, TranslateModule],
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
   Projects = [

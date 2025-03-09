@@ -2,15 +2,20 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
 import { debounceTime } from 'rxjs';
 import { BannerComponent } from './banner/banner.component';
-
+import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core'; //
 @Component({
-    selector: 'app-above-the-fold',
-    imports: [BannerComponent],
-    templateUrl: './above-the-fold.component.html',
-    styleUrl: './above-the-fold.component.scss'
+  selector: 'app-above-the-fold',
+  imports: [BannerComponent, TranslateModule],
+  templateUrl: './above-the-fold.component.html',
+  styleUrl: './above-the-fold.component.scss',
 })
 export class AboveTheFoldComponent implements OnInit, OnDestroy {
-  constructor() {}
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 
   // resizeSubscription?: Subscription;
 
