@@ -7,7 +7,7 @@
   gap: 2rem;
   color: $main-color;
   font-family: $font-karla;
-  padding-top: 10rem;
+  padding-top: 4rem;
 }
 
 .left-container {
@@ -36,10 +36,6 @@
   }
 }
 
-.placeholderRed::placeholder {
-  color: red !important;
-}
-
 .right-container {
   width: 50%;
   display: flex;
@@ -56,35 +52,41 @@
   > label:not(:last-of-type) {
     padding-left: 2rem;
   }
-  > textarea {
-    &::placeholder {
+
+  div {
+    > textarea {
+      &::placeholder {
+        color: white;
+        font-size: 18px;
+        font-family: $font-karla;
+      }
+      width: 100%;
+      background-color: transparent;
+      border: none;
       color: white;
       font-size: 18px;
+      padding: 0;
+      overflow: hidden;
+      resize: none;
+    }
+    > input {
+      &::focus {
+        border: red;
+      }
+      &::placeholder {
+        color: white;
+        font-size: 18px;
+        font-family: $font-karla;
+      }
+      border: none;
+      background-color: transparent;
       font-family: $font-karla;
-    }
-    background-color: transparent;
-    border: none;
-    color: white;
-    padding-left: 2rem;
-    font-size: 18px;
-    line-height: normal;
-  }
-  > input {
-    &::focus {
-      border: red;
-    }
-    &::placeholder {
+      font-weight: 400;
       color: white;
       font-size: 18px;
-      font-family: $font-karla;
+      width: 100%;
+      padding: 0;
     }
-    border: none;
-    background-color: transparent;
-    font-family: $font-karla;
-    font-weight: 400;
-    color: white;
-    font-size: 18px;
-    padding-left: 2rem;
   }
   > input.empty::placeholder {
     color: #ec9999;
@@ -135,13 +137,17 @@
   //   }
 }
 
-.notValid {
+.input-containers {
+  position: relative;
   padding-left: 2rem;
+  display: flex;
+}
+
+.notValid {
+  position: absolute;
+  bottom: 20px;
   font-size: 18px;
   color: #ec9999;
-}
-.notValid:last-of-type {
-  height: 48px;
 }
 
 @keyframes moveButtonText {
@@ -205,5 +211,46 @@
 
   label {
     cursor: pointer;
+  }
+}
+
+.submit-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .left-container {
+    width: 100%;
+    h2 {
+      font-size: 48px;
+    }
+  }
+  .right-container {
+    width: 100%;
+    font-size: 20px;
+  }
+  .notValid {
+    font-size: 12px;
+  }
+  .form-container {
+    div {
+      > input {
+        &::placeholder {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .checkbox-container {
+    > p {
+      font-size: 16px;
+    }
   }
 }

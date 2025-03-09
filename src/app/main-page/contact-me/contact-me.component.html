@@ -1,4 +1,4 @@
-<div class="container">
+<div id="contactMe" class="container">
   <div class="left-container">
     <p>Contact me</p>
     <h2>Let's work together</h2>
@@ -17,7 +17,7 @@
       #contactForm="ngForm"
     >
       <label for="name"><p>What's your name</p></label>
-      <div>
+      <div class="input-containers">
         <input
           #nameModel="ngModel"
           #nameRef
@@ -25,59 +25,61 @@
           type="text"
           id="name"
           name="name"
-          [class]="nameIsValid ? '' : 'placeholderRed'"
           [placeholder]="yourName"
           (blur)="!nameModel.valid ? (applyUserNotification = true) : ''"
           minlength="2"
           required
         />
-        @if(applyUserNotification){
-        <div (click)="applyUserNotification = false" class="notValid">
+        @if(applyUserNotification && nameModel.invalid && nameModel.touched){
+        <div (click)="focusInputAgain()" class="notValid">
           Please enter your name
         </div>
         }
       </div>
 
       <label for="email"><p>What's your email?</p></label>
-      <input
-        *ngIf="mailIsValid"
-        #emailRef
-        #emailModel="ngModel"
-        [(ngModel)]="contactData.email"
-        type="email"
-        id="email"
-        name="email"
-        placeholder="youremail@email.com"
-        required
-        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-        (blur)="(emailRef)"
-      />
-      <span
-        (click)="switchToInput('mail')"
-        class="notValid"
-        *ngIf="!mailIsValid"
-        >Hoppla! your email is required</span
-      >
+      <div class="input-containers">
+        <input
+          #emailRef
+          #emailModel="ngModel"
+          [(ngModel)]="contactData.email"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="youremail@email.com"
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          (blur)="!emailModel.valid ? (applyUserNotification = true) : ''"
+        />
+        @if(applyUserNotification && emailModel.invalid && emailModel.touched){
+        <div (click)="applyUserNotification = false" class="notValid">
+          Hoppla! your email is required
+        </div>
+        }
+      </div>
+
       <label for="message"><p>How can I help you?</p> </label>
-      <textarea
-        *ngIf="textareaIsValid"
-        #textareaRef
-        #textareaModel="ngModel"
-        [(ngModel)]="contactData.message"
-        #message="ngModel"
-        name="message"
-        id="message"
-        placeholder="Hello Daniel, I am interested in..."
-        required
-        minlength="5"
-        (blur)="checkTextAreaInput()"
-      ></textarea>
-      <span
-        (click)="switchToInput('textarea')"
-        class="notValid"
-        *ngIf="!textareaIsValid"
-        >What do you need to develop?</span
-      >
+      <div class="input-containers">
+        <textarea
+          rows="1"
+          #textareaRef
+          #textareaModel="ngModel"
+          [(ngModel)]="contactData.message"
+          #message="ngModel"
+          name="message"
+          id="message"
+          placeholder="Hello Daniel, I am interested in..."
+          required
+          minlength="5"
+          (blur)="!textareaModel.valid ? (applyUserNotification = true) : ''"
+        ></textarea>
+        @if(applyUserNotification && textareaModel.invalid &&
+        textareaModel.touched){
+        <div (click)="applyUserNotification = false" class="notValid">
+          What do you need to develop?
+        </div>
+        }
+      </div>
       <label class="checkbox-container">
         <input
           class="checkbox"
@@ -93,9 +95,31 @@
           and agree to the processing of my data as outlinded.
         </p>
       </label>
-      <button type="submit" [disabled]="!privacyAccepted">
-        <p>Say Hello :)</p>
-      </button>
+      <div class="submit-button">
+        <button
+          type="submit"
+          [disabled]="
+            !privacyAccepted ||
+            textareaModel.invalid ||
+            emailModel.invalid ||
+            nameModel.invalid
+          "
+        >
+          <p>Say Hello :)</p>
+        </button>
+        @if(sendComplete){
+        <div
+          style="
+            position: absolute;
+            bottom: 45px;
+            color: yellow;
+            font-size: 18px;
+          "
+        >
+          Email wurd gesendet !
+        </div>
+        }
+      </div>
     </form>
   </div>
 </div>

@@ -24,22 +24,22 @@ export class ContactMeComponent implements AfterViewInit {
   // @ViewChild('textAreaInput') textAreaInput!: ElementRef;
 
   nameRef = viewChild.required<ElementRef>('nameRef');
-  emailRef = viewChild.required<ElementRef>('emailRef');
-  textAreaRef = viewChild.required<ElementRef>('textareaRef');
+  // emailRef = viewChild.required<ElementRef>('emailRef');
+  // textAreaRef = viewChild.required<ElementRef>('textareaRef');
 
-  nameInputNgModel = viewChild.required<NgModel>('nameModel');
+  // nameInputNgModel = viewChild.required<NgModel>('nameModel');
   emailInputNgModel = viewChild.required<NgModel>('emailModel');
-  textAreaInputNgModel = viewChild.required<NgModel>('textareaModel');
-
-  ngAfterViewInit() {
+  // textAreaInputNgModel = viewChild.required<NgModel>('textareaModel');
+  ngAfterViewInit(): void {
     this.nameRef();
+    this.emailInputNgModel();
   }
 
   privacyAccepted = false;
-
   mailIsValid: boolean = true;
   nameIsValid: boolean = true;
   textareaIsValid: boolean = true;
+  sendComplete: boolean = false;
 
   yourName: string = 'Your name goes here';
 
@@ -52,6 +52,11 @@ export class ContactMeComponent implements AfterViewInit {
   };
 
   mailTest = false;
+
+  focusInputAgain() {
+    this.applyUserNotification = false;
+    this.nameRef().nativeElement.focus();
+  }
 
   post = {
     endPoint: 'https://daniel-gather.de/sendMail.php',
@@ -75,7 +80,13 @@ export class ContactMeComponent implements AfterViewInit {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            console.info('send post complete');
+            this.sendComplete = true;
+            setTimeout(() => {
+              this.sendComplete = false;
+            }, 3000);
+          },
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
