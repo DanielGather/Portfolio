@@ -11,37 +11,23 @@ import { HttpClient } from '@angular/common/http';
 import { Renderer2 } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [FormsModule, NgIf],
+  imports: [FormsModule, NgIf, TranslateModule],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss',
 })
-export class ContactMeComponent implements AfterViewInit {
+export class ContactMeComponent {
   constructor(private renderer: Renderer2, el: ElementRef) {}
   applyUserNotification = false;
-  // @ViewChild('textAreaInput') textAreaInput!: ElementRef;
-
-  nameRef = viewChild.required<ElementRef>('nameRef');
-  // emailRef = viewChild.required<ElementRef>('emailRef');
-  // textAreaRef = viewChild.required<ElementRef>('textareaRef');
-
-  // nameInputNgModel = viewChild.required<NgModel>('nameModel');
-  emailInputNgModel = viewChild.required<NgModel>('emailModel');
-  // textAreaInputNgModel = viewChild.required<NgModel>('textareaModel');
-  ngAfterViewInit(): void {
-    this.nameRef();
-    this.emailInputNgModel();
-  }
 
   privacyAccepted = false;
   mailIsValid: boolean = true;
   nameIsValid: boolean = true;
   textareaIsValid: boolean = true;
   sendComplete: boolean = false;
-
-  yourName: string = 'Your name goes here';
 
   http = inject(HttpClient);
 
@@ -52,11 +38,6 @@ export class ContactMeComponent implements AfterViewInit {
   };
 
   mailTest = false;
-
-  focusInputAgain() {
-    this.applyUserNotification = false;
-    this.nameRef().nativeElement.focus();
-  }
 
   post = {
     endPoint: 'https://daniel-gather.de/sendMail.php',

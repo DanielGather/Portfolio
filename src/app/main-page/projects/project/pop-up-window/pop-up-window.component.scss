@@ -196,6 +196,7 @@
 @media (max-width: 600px) {
   .full-pop-up-window {
     padding: 0rem 0.5rem 0rem 0.5rem;
+    overflow-y: scroll;
   }
   .pop-up-window {
     padding: 1rem 1rem 1rem 1rem;
@@ -208,5 +209,14 @@
     button {
       min-width: 125px;
     }
+  }
+}
+
+@media (max-height: 670px) {
+  .pop-up-window {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    right: 8px;
   }
 }

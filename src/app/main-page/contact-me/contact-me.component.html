@@ -1,14 +1,16 @@
 <div id="contactMe" class="container">
   <div class="left-container">
-    <p>Contact me</p>
-    <h2>Let's work together</h2>
-    <p>Got a problem to solve?</p>
+    <p>{{ "contactMe.contactMe" | translate }}</p>
+    <h2>{{ "contactMe.letsWork" | translate }}</h2>
+    <p>{{ "contactMe.gotProblem" | translate }}</p>
     <p>
-      Encourage people to contact you and describe what role you are interested
-      in. Show that you will add value to their projects through your work.
+      {{ "contactMe.description" | translate }}
     </p>
     <br />
-    <p>Need a Frontend Developer? <span>Let's talk!</span></p>
+    <p>
+      {{ "contactMe.needFrontend" | translate }}
+      <span>{{ "contactMe.letsTalk" | translate }}</span>
+    </p>
   </div>
   <div class="right-container">
     <form
@@ -16,7 +18,9 @@
       (ngSubmit)="onSubmit(contactForm)"
       #contactForm="ngForm"
     >
-      <label for="name"><p>What's your name</p></label>
+      <label for="name"
+        ><p>{{ "contactMe.yourName" | translate }}</p></label
+      >
       <div class="input-containers">
         <input
           #nameModel="ngModel"
@@ -25,19 +29,21 @@
           type="text"
           id="name"
           name="name"
-          [placeholder]="yourName"
+          placeholder="{{ 'contactMe.yourNamePlaceholder' | translate }}"
           (blur)="!nameModel.valid ? (applyUserNotification = true) : ''"
           minlength="2"
           required
         />
         @if(applyUserNotification && nameModel.invalid && nameModel.touched){
-        <div (click)="focusInputAgain()" class="notValid">
-          Please enter your name
+        <div class="notValid">
+          {{ "contactMe.warning.name" | translate }}
         </div>
         }
       </div>
 
-      <label for="email"><p>What's your email?</p></label>
+      <label for="email"
+        ><p>{{ "contactMe.yourEmail" | translate }}</p></label
+      >
       <div class="input-containers">
         <input
           #emailRef
@@ -46,19 +52,21 @@
           type="email"
           id="email"
           name="email"
-          placeholder="youremail@email.com"
+          placeholder="{{ 'contactMe.yourEmailPlaceholder' | translate }}"
           required
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           (blur)="!emailModel.valid ? (applyUserNotification = true) : ''"
         />
         @if(applyUserNotification && emailModel.invalid && emailModel.touched){
-        <div (click)="applyUserNotification = false" class="notValid">
-          Hoppla! your email is required
+        <div class="notValid">
+          {{ "contactMe.warning.email" | translate }}
         </div>
         }
       </div>
 
-      <label for="message"><p>How can I help you?</p> </label>
+      <label for="message"
+        ><p>{{ "contactMe.yourMessage" | translate }}</p>
+      </label>
       <div class="input-containers">
         <textarea
           rows="1"
@@ -68,15 +76,15 @@
           #message="ngModel"
           name="message"
           id="message"
-          placeholder="Hello Daniel, I am interested in..."
+          placeholder="{{ 'contactMe.yourMessagePlaceholder' | translate }}"
           required
           minlength="5"
           (blur)="!textareaModel.valid ? (applyUserNotification = true) : ''"
         ></textarea>
         @if(applyUserNotification && textareaModel.invalid &&
         textareaModel.touched){
-        <div (click)="applyUserNotification = false" class="notValid">
-          What do you need to develop?
+        <div class="notValid">
+          {{ "contactMe.warning.message" | translate }}
         </div>
         }
       </div>
@@ -89,11 +97,7 @@
           name="privacyPolicy"
         />
         <span class="custom-checkbox"></span>
-        <p>
-          I've read the
-          <span>privacy policy</span>
-          and agree to the processing of my data as outlinded.
-        </p>
+        <p [innerHTML]="'contactMe.privacyPolicy' | translate"></p>
       </label>
       <div class="submit-button">
         <button

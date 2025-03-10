@@ -18,6 +18,26 @@
 		"openToWork": "Open to work",
 		"remote": "Available for remote work"
 	},
+	"contactMe": {
+		"contactMe": "Contact me",
+		"description": "Are you looking for a dedicated and skilled professional to take your project to the next level? Please feel free to get in touch! Let me know which role is pivotal for your project – whether in software development or another exciting area. With my passion for innovative solutions and my expertise, I am confident that I can make a significant contribution to your project's success.",
+		"gotProblem": "Got a problem to solve?",
+		"letsTalk": "Let's talk!",
+		"letsWork": "Lets's work together",
+		"needFrontend": "Need a Frontend Developer?",
+		"privacyPolicy": "I've read the <span class=\"privac-policy\">privacy policy</span> and agree to the processing of my data as outlined",
+		"warning": {
+			"email": "Hoppla! your email is required",
+			"message": "What do you need to develop?",
+			"name": "Oops! it seems your name is missing"
+		},
+		"yourEmail": "What's your email?",
+		"yourEmailPlaceholder": "youremail@email.de",
+		"yourMessage": "How can I help you?",
+		"yourMessagePlaceholder": "Hello Daniel, I am interested in...",
+		"yourName": "What's your name",
+		"yourNamePlaceholder": "Your name goes here"
+	},
 	"footer": {
 		"developer": "Web developer",
 		"legalNotice": "Legal Notice"
