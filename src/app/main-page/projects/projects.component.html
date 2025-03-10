@@ -2,9 +2,10 @@
   <div>
     <p>Portfolio</p>
     <h2>{{ "projects.featuredProjects" | translate }}</h2>
-    <p style="color: white; font-size: 18px">
-      {{ "projects.description" | translate }}
-    </p>
+    <p
+      [innerHTML]="'projects.description' | translate"
+      style="color: white; font-size: 18px"
+    ></p>
   </div>
   <app-project [featuredProjects]="Projects"></app-project>
 </div>
