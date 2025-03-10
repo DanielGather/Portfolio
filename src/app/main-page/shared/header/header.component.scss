@@ -4,6 +4,7 @@
 .header {
   @include dFlex($jc: space-between);
   position: sticky;
+  z-index: 101;
   top: 0px;
   width: 100%;
   height: 100px;
@@ -51,16 +52,51 @@
 }
 
 .burger-menu {
+  position: relative;
   display: none;
   flex-direction: column;
   gap: 0.5rem;
-  cursor: pointer;
+  svg:hover {
+    cursor: pointer;
+  }
 }
 
 .bar {
   width: 32px;
   height: 1.5px;
   background-color: white;
+}
+
+.header-overlay {
+  position: absolute;
+  z-index: 100;
+  inset: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.burger-menu-open {
+  position: absolute;
+  z-index: 101 !important;
+  border: 1px solid $main-color;
+  width: 230px;
+  height: 250px;
+  top: 32px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  box-shadow: -2px 0px 6px 0px rgb(0, 0, 0, 0.2);
+  background: linear-gradient(
+    45deg,
+    #1c1c1c 0%,
+    #1c1c1c 45%,
+    #08463b 70%,
+    #08463b 100%
+  );
 }
 
 @media (max-width: 750px) {
