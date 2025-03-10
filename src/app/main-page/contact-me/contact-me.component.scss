@@ -65,7 +65,7 @@
       border: none;
       color: white;
       font-size: 18px;
-      padding: 0;
+      padding-left: 0.5rem;
       overflow: hidden;
       resize: none;
     }
@@ -85,7 +85,7 @@
       color: white;
       font-size: 18px;
       width: 100%;
-      padding: 0;
+      padding-left: 0.5rem;
     }
   }
   > input.empty::placeholder {

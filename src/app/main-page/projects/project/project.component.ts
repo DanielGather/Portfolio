@@ -15,6 +15,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-project',
+  standalone: true,
   imports: [NgStyle, PopUpWindowComponent, NgIf, TranslateModule],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss',
