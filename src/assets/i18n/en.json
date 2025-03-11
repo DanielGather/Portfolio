@@ -1,9 +1,9 @@
 {
 	"aboutMeComponent": {
-		"aboutMe": "Hi, I'm a german speaking\n        Frontend Developer based in Mönchengladbach. Motivated by the limitless\n        opportunities within IT, I am exited about crafting visually captivating\n        and intuitive websites and applicatinons.",
-		"basedIn": "Flexible in terms of working environments, I can work effectively both\n          on-site in Mönchengladbach and remotely.",
+		"aboutMe": "Hi, I'm a German-speaking Frontend Developer based in Mönchengladbach. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
+		"basedIn": "I am very flexible when it comes to work environments and can work effectively both in the Mönchengladbach area and remotely",
 		"challenges": "I am open-minded and always looking for personal challenges to\n          constantly improve my knowledge and skills.",
-		"description": "Im my profession, programming isn't just about writing code; it's a\n          creative from of probem-solving. I take pride in my ability to distill\n          complex technical challenges into simple, user-friendly solutions.\n          This way, I help you achieve your goals and bring your vison to life.",
+		"description": "In my profession, programming isn't merely about writing code; it is a creative approach to problem-solving. I take pride in my ability to distill complex technical challenges into straightforward, user-friendly solutions. In doing so, I help you achieve your goals and bring your vision to life.",
 		"title": "About me",
 		"whoIAm": "Who I Am"
 	},
@@ -47,13 +47,20 @@
 		"projects": "Projects",
 		"skills": "Skills"
 	},
+	"popUpWindow": {
+		"about": "What is this project about?",
+		"description01": "A task manager inspired by the Kanban system: create and organize tasks using drag-and-drop functionality, assign users, and categorize tasks.",
+		"description02": "Take control of Sharkie, the fearless fish, and battle your way through the depths of the ocean! Collect coins and use bottles to execute powerful attacks. Defeat smaller fish and face an increasingly challenging final boss in each level.",
+		"description03": "This application, inspired by Slack, provides an intuitive solution for enhancing internal communication. With real-time messaging and a well-organized channel structure, team interaction is significantly simplified.",
+		"nextProject": "Next project"
+	},
 	"projects": {
 		"description": "Explore a selection of my work  here - interact with projects to see my skills in action.",
 		"featuredProjects": "Featured Projects"
 	},
 	"skills": {
 		"anotherSkill": "another skill?",
-		"contactMe": "Feel free to contact me. I look\n        forward to expanding on my previous knowledge.",
+		"contactMe": "Feel free to contact me. I look forward to further expanding my knowledge.",
 		"description": "I have gained extensive experience working with HTML, CSS, JavaScript, TypeScript, and Angular, enabling me to create modern, responsive web applications. My broad skill set in front-end development empowers me to deliver creative solutions while adapting flexibly to the ever-evolving demands of the web. I place great importance on continuous learning and quickly embracing new technologies to stay ahead in this rapidly changing industry.",
 		"letsTalk": "Let's Talk",
 		"needAnotherSkill": "You need",
