@@ -32,6 +32,24 @@
     opacity: 1;
   }
 }
+.hoverLogo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.hoverLogo:hover {
+  > svg {
+    path {
+      fill: transparent;
+    }
+    stroke: $main-color;
+  }
+  p {
+    color: transparent !important;
+  }
+  -webkit-text-stroke: 0.65px white;
+}
 
 .point {
   @include dFlex($ai: unset);
@@ -45,10 +63,10 @@
 
 .outline {
   font-size: 32px !important;
-  &:hover {
-    color: transparent !important;
-    -webkit-text-stroke: 0.65px white;
-  }
+  // &:hover {
+  //   color: transparent !important;
+  //   -webkit-text-stroke: 0.65px white;
+  // }
 }
 
 .burger-menu {
@@ -101,6 +119,9 @@
 
 @media (max-width: 750px) {
   .header-left-container {
+    display: none;
+  }
+  .outline {
     display: none;
   }
   .burger-menu {
