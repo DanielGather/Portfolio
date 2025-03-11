@@ -4,7 +4,10 @@
     track project){
     <div
       [ngStyle]="{ 'border-bottom': last ? borderColor : '' }"
-      class="project"
+      [ngClass]="{
+        'active-project': project.active,
+        'coming-soon': !project.active
+      }"
       (click)="openPopup(index)"
       (mouseenter)="hoverProject(project)"
       (mouseleave)="leaveHover(project)"

@@ -13,7 +13,7 @@
   width: 100%;
   position: relative;
 }
-.project {
+.active-project {
   @include dFlex($jc: space-between);
   @include font($fs: 24px, $fw: 700, $ff: $font-fira);
   height: 100px;
@@ -22,7 +22,24 @@
   padding: 0rem 1rem 0rem 1rem;
 }
 
-.project:hover {
+.coming-soon {
+  @include dFlex($jc: space-between);
+  @include font($fs: 24px, $fw: 700, $ff: $font-fira);
+  height: 100px;
+  border-top: 1px solid $main-color;
+  color: white;
+  padding: 0rem 1rem 0rem 1rem;
+  background-color: grey;
+  opacity: 0.5;
+}
+.coming-soon:hover {
+  cursor: pointer;
+  img {
+    display: unset;
+  }
+}
+
+.active-project:hover {
   background-color: #2f5b54;
   cursor: pointer;
 }
@@ -35,7 +52,7 @@
   }
 }
 
-.project:hover img {
+.active-project:hover img {
   display: unset;
 }
 
@@ -97,8 +114,6 @@
     font-family: $font-fira;
   }
   .technologies {
-    width: 100%;
-    font-size: 16px;
-    gap: 0.25rem;
+    display: none;
   }
 }

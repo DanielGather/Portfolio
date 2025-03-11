@@ -7,7 +7,7 @@ import {
   Inject,
 } from '@angular/core';
 import { Projects } from './projects';
-import { NgStyle } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { PopUpWindowComponent } from './pop-up-window/pop-up-window.component';
 import { NgIf } from '@angular/common';
 import { DOCUMENT } from '@angular/common';
@@ -16,7 +16,7 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [NgStyle, PopUpWindowComponent, NgIf, TranslateModule],
+  imports: [NgStyle, PopUpWindowComponent, NgIf, TranslateModule, NgClass],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss',
 })
