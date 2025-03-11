@@ -195,11 +195,12 @@
 
 @media (max-width: 600px) {
   .full-pop-up-window {
-    padding: 0rem 0.5rem 0rem 0.5rem;
+    padding: 2rem 0.5rem 2rem 0.5rem;
     overflow-y: scroll;
+    align-items: flex-start;
   }
   .pop-up-window {
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
   }
   .right-container img {
     width: 100%;
@@ -209,6 +210,9 @@
     button {
       min-width: 125px;
     }
+  }
+  .project-name {
+    font-size: 48px;
   }
 }
 

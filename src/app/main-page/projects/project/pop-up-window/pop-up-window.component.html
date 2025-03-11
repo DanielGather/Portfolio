@@ -3,10 +3,13 @@
     <div class="left-container">
       <h2>{{ popupProject?.projectNumber }}</h2>
       <p class="project-name">{{ popupProject?.projectName }}</p>
-      <p class="about-project">What is this project about?</p>
+      <p class="about-project">
+        {{ "popUpWindow.about" | translate }}
+      </p>
       <p class="description">
-        Task manager inspired by the Kanban System. Create and organize tasks
-        using drag and drop functions, assign users and categories.
+        {{
+          "popUpWindow.description" + popupProject?.projectNumber | translate
+        }}
       </p>
       <div class="technologies">
         @for(tech of popupProject?.technologyUsed; track tech){
@@ -49,7 +52,7 @@
         </button>
       </div>
       <div (click)="showNextProject()" class="next-project-mobile">
-        <p>Next project</p>
+        <p>{{ "popUpWindow.nextProject" | translate }}</p>
         <svg
           width="19"
           height="20"
@@ -75,7 +78,7 @@
       </div>
       <img src="{{ popupProject?.imgProject }}" alt="" />
       <div (click)="showNextProject()" class="next-project">
-        <p>Next project</p>
+        <p>{{ "popUpWindow.nextProject" | translate }}</p>
         <svg
           width="19"
           height="20"

@@ -1,10 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Projects } from '../projects';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-pop-up-window',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './pop-up-window.component.html',
   styleUrl: './pop-up-window.component.scss',
 })
