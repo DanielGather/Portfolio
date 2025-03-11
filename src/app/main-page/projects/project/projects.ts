@@ -5,6 +5,8 @@ export interface Technology {
 export interface Projects {
   projectNumber: string;
   projectName: string;
+  active: boolean;
+  description: string;
   technologyUsed: Technology[];
   hover: boolean;
   imgProject: string;
