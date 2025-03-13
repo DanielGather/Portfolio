@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
+import { LegalNoticeComponent } from './main-page/legal-notice/legal-notice.component';
 
 @Component({
   selector: 'app-root',
-  imports: [MainPageComponent, TranslateModule],
+  imports: [
+    MainPageComponent,
+    LegalNoticeComponent,
+    TranslateModule,
+    RouterOutlet,
+    RouterLink,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

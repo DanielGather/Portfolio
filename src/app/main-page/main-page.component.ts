@@ -7,21 +7,22 @@ import { ProjectsComponent } from './projects/projects.component';
 import { WhatMyColleaguesSayAboutMeComponent } from './what-my-colleagues-say-about-me/what-my-colleagues-say-about-me.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 @Component({
-    selector: 'app-main-page',
-    imports: [
-        HeaderComponent,
-        AboutMeComponent,
-        AboveTheFoldComponent,
-        ContactMeComponent,
-        MySkillsComponent,
-        ProjectsComponent,
-        WhatMyColleaguesSayAboutMeComponent,
-        FooterComponent,
-        HeaderComponent,
-    ],
-    templateUrl: './main-page.component.html',
-    styleUrl: './main-page.component.scss'
+  selector: 'app-main-page',
+  imports: [
+    HeaderComponent,
+    AboutMeComponent,
+    AboveTheFoldComponent,
+    ContactMeComponent,
+    MySkillsComponent,
+    ProjectsComponent,
+    WhatMyColleaguesSayAboutMeComponent,
+    FooterComponent,
+    HeaderComponent,
+  ],
+  templateUrl: './main-page.component.html',
+  styleUrl: './main-page.component.scss',
 })
 export class MainPageComponent {}
