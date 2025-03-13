@@ -24,5 +24,6 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',
+  host: { class: 'main-page' },
 })
 export class MainPageComponent {}

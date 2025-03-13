@@ -169,3 +169,37 @@ app-root {
 .privac-policy {
   color: $main-color;
 }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  max-width: 1440px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background: linear-gradient(
+    45deg,
+    $start-color 0%,
+    $start-color 45%,
+    $end-color 70%,
+    $end-color 100%
+  );
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background: linear-gradient(
+    45deg,
+    $start-color 0%,
+    $start-color 45%,
+    $end-color 70%,
+    $end-color 100%
+  );
+  overflow: hidden;
+}
