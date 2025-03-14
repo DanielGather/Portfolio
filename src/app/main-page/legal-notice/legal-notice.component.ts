@@ -2,14 +2,21 @@ import { Component } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
+import { OnDestroy } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-legal-notice',
-  imports: [RouterOutlet, RouterLink, HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss',
   host: {
     class: 'page',
   },
 })
-export class LegalNoticeComponent {}
+export class LegalNoticeComponent implements OnDestroy {
+  constructor(public sharedService: SharedService) {}
+  ngOnDestroy() {
+    this.sharedService.impressum.set(true);
+  }
+}

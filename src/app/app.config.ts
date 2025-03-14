@@ -3,7 +3,11 @@ import {
   importProvidersFrom,
   provideZoneChangeDetection,
 } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+  provideRouter,
+  ROUTER_CONFIGURATION,
+  ExtraOptions,
+} from '@angular/router';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
@@ -14,9 +18,15 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
   http: HttpClient
 ) => new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
+const routerConfig: ExtraOptions = {
+  anchorScrolling: 'enabled',
+  scrollPositionRestoration: 'enabled',
+};
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    { provide: ROUTER_CONFIGURATION, useValue: routerConfig },
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(),
     importProvidersFrom([

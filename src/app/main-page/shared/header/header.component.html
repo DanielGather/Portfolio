@@ -3,15 +3,21 @@
     <app-switch-language></app-switch-language>
 
     <div class="hover-container">
-      <a href="#aboutMe">{{ "header.aboutMe" | translate }}</a>
+      <a routerLink="/main-page" (click)="scrollToAnchor('aboutMe')">{{
+        "header.aboutMe" | translate
+      }}</a>
       <p class="point">&middot;</p>
     </div>
     <div class="hover-container">
-      <a href="#skills">{{ "header.skills" | translate }}</a>
+      <a routerLink="/main-page" (click)="scrollToAnchor('skills')">{{
+        "header.skills" | translate
+      }}</a>
       <p class="point">&middot;</p>
     </div>
     <div class="hover-container">
-      <a href="#projects">{{ "header.projects" | translate }}</a>
+      <a routerLink="/main-page" (click)="scrollToAnchor('projects')">{{
+        "header.projects" | translate
+      }}</a>
       <p class="point">&middot;</p>
     </div>
   </div>

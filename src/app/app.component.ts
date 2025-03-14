@@ -5,6 +5,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LegalNoticeComponent } from './main-page/legal-notice/legal-notice.component';
+import { HeaderComponent } from './main-page/shared/header/header.component';
+import { FooterComponent } from './main-page/shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,8 @@ import { LegalNoticeComponent } from './main-page/legal-notice/legal-notice.comp
     TranslateModule,
     RouterOutlet,
     RouterLink,
+    HeaderComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
