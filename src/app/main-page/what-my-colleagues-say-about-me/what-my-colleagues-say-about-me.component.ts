@@ -27,19 +27,19 @@ export class WhatMyColleaguesSayAboutMeComponent {
 
   reviews = [
     {
-      text: 'Daniel has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the succcess of our project.',
+      text: '',
       name: 'R.Bongartz',
       role: 'Team Partner',
     },
     {
-      text: 'asdajskdqwiejqiwje asdjkajdkqiejk aksdjkdqjwiasdajdq',
-      name: 'P.Pansen',
-      role: 'Developer',
+      text: '',
+      name: 'J.Schmitz',
+      role: 'Team Partner',
     },
     {
-      text: 'Daniel has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the succcess of our project.',
-      name: 'Babsi',
-      role: 'Head of All',
+      text: '',
+      name: 'K.Conrad',
+      role: 'Team Partner',
     },
   ];
 
