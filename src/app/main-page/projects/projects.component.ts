@@ -14,6 +14,8 @@ export class ProjectsComponent {
     {
       projectNumber: '01',
       projectName: 'Join',
+      projectLink: 'https://join.daniel-gather.de/',
+      githubLink: 'https://github.com/DanielGather/Join',
       active: true,
       description:
         'A task manager inspired by the Kanban system: create and organize tasks using drag-and-drop functionality, assign users, and categorize tasks.',
@@ -43,6 +45,8 @@ export class ProjectsComponent {
     {
       projectNumber: '02',
       projectName: 'Sharkie',
+      projectLink: 'https://sharkie.daniel-gather.de/',
+      githubLink: 'https://github.com/DanielGather/Sharkie',
       active: true,
       description:
         'Take control of Sharkie, the fearless fish, and battle your way through the depths of the ocean! Collect coins and use bottles to execute powerful attacks. Defeat smaller fish and face an increasingly challenging final boss in each level.',
@@ -67,6 +71,8 @@ export class ProjectsComponent {
     {
       projectNumber: '03',
       projectName: 'DABubble COMING SOON',
+      projectLink: '',
+      githubLink: '',
       active: false,
       description:
         'This application, inspired by Slack, provides an intuitive solution for enhancing internal communication. With real-time messaging and a well-organized channel structure, team interaction is significantly simplified.',

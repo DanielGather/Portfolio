@@ -5,6 +5,8 @@ export interface Technology {
 export interface Projects {
   projectNumber: string;
   projectName: string;
+  githubLink: string;
+  projectLink: string;
   active: boolean;
   description: string;
   technologyUsed: Technology[];
