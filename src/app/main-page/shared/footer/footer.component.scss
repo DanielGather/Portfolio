@@ -22,7 +22,6 @@
 }
 
 .right-container {
-  // @include dFlex($ai: flex-start, $g: 0.5rem);
   grid-column: 3;
   grid-row: 1;
   flex-direction: column;
@@ -35,6 +34,7 @@
   & ul {
     list-style: none;
     & li:has(a:hover) {
+      cursor: pointer;
       list-style-type: disc;
       color: $main-color;
       & a {
@@ -62,8 +62,9 @@
       & li:has(a:hover) {
         list-style-type: inherit;
         color: inherit;
-        & a {
+        & a:hover {
           color: inherit;
+          cursor: pointer;
         }
       }
     }
