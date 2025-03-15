@@ -54,4 +54,11 @@ export class MySkillsComponent {
       tag: 'Growth mindest',
     },
   ];
+
+  scrollToContact(section: 'contactMe'): void {
+    const contactSection = document.getElementById(section);
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
