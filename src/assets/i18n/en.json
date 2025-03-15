@@ -1,76 +1,82 @@
 {
-	"aboutMeComponent": {
-		"aboutMe": "Hi, I'm a German-speaking Frontend Developer based in Mönchengladbach. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
-		"basedIn": "I am very flexible when it comes to work environments and can work effectively both in the Mönchengladbach area and remotely",
-		"challenges": "I am open-minded and always looking for personal challenges to\n          constantly improve my knowledge and skills.",
-		"description": "In my profession, programming isn't merely about writing code; it is a creative approach to problem-solving. I take pride in my ability to distill complex technical challenges into straightforward, user-friendly solutions. In doing so, I help you achieve your goals and bring your vision to life.",
-		"title": "About me",
-		"whoIAm": "Who I Am"
-	},
-	"aboveTheFold": {
-		"checkMyWork": "Check my work",
-		"contactMe": "Contact me",
-		"frontendDeveloper": "Frontend Developer"
-	},
-	"banner": {
-		"basedIn": "Based in Mönchengladbach",
-		"FrontendDeveloper": "Frontend Developer",
-		"openToWork": "Open to work",
-		"remote": "Available for remote work"
-	},
-	"contactMe": {
-		"contactMe": "Contact me",
-		"description": "Are you looking for a dedicated and skilled professional to take your project to the next level? Please feel free to get in touch! Let me know which role is pivotal for your project – whether in software development or another exciting area. With my passion for innovative solutions and my expertise, I am confident that I can make a significant contribution to your project's success.",
-		"gotProblem": "Got a problem to solve?",
-		"letsTalk": "Let's talk!",
-		"letsWork": "Lets's work together",
-		"needFrontend": "Need a Frontend Developer?",
-		"privacyPolicy": "I've read the <span class=\"privac-policy\">privacy policy</span> and agree to the processing of my data as outlined",
-		"warning": {
-			"email": "Hoppla! your email is required",
-			"message": "What do you need to develop?",
-			"name": "Oops! it seems your name is missing"
-		},
-		"yourEmail": "What's your email?",
-		"yourEmailPlaceholder": "youremail@email.de",
-		"yourMessage": "How can I help you?",
-		"yourMessagePlaceholder": "Hello Daniel, I am interested in...",
-		"yourName": "What's your name",
-		"yourNamePlaceholder": "Your name goes here"
-	},
-	"footer": {
-		"developer": "Web developer",
-		"legalNotice": "Legal Notice"
-	},
-	"header": {
-		"aboutMe": "About me",
-		"projects": "Projects",
-		"skills": "Skills"
-	},
-	"popUpWindow": {
-		"about": "What is this project about?",
-		"description01": "A task manager inspired by the Kanban system: create and organize tasks using drag-and-drop functionality, assign users, and categorize tasks.",
-		"description02": "Take control of Sharkie, the fearless fish, and battle your way through the depths of the ocean! Collect coins and use bottles to execute powerful attacks. Defeat smaller fish and face an increasingly challenging final boss in each level.",
-		"description03": "This application, inspired by Slack, provides an intuitive solution for enhancing internal communication. With real-time messaging and a well-organized channel structure, team interaction is significantly simplified.",
-		"nextProject": "Next project"
-	},
-	"projects": {
-		"description": "Explore a selection of my work  here - interact with projects to see my skills in action.",
-		"featuredProjects": "Featured Projects"
-	},
-	"skills": {
-		"anotherSkill": "another skill?",
-		"contactMe": "Feel free to contact me. I look forward to further expanding my knowledge.",
-		"description": "I have gained extensive experience working with HTML, CSS, JavaScript, TypeScript, and Angular, enabling me to create modern, responsive web applications. My broad skill set in front-end development empowers me to deliver creative solutions while adapting flexibly to the ever-evolving demands of the web. I place great importance on continuous learning and quickly embracing new technologies to stay ahead in this rapidly changing industry.",
-		"letsTalk": "Let's Talk",
-		"needAnotherSkill": "You need",
-		"skillSet": "Skill set",
-		"technologies": "Technlogies"
-	},
-	"whatPeopleSayAboutMe": {
-		"0": "Daniel has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the succcess of our project.",
-		"1": "asdajskdqwiejqiwje asdjkajdkqiejk aksdjkdqjwiasdajdq",
-		"2": "JohahaPedohaha",
-		"title": "What my colleagues say about\n    me"
-	}
+  "aboutMeComponent": {
+    "aboutMe": "Hi, I'm a German-speaking Frontend Developer based in Mönchengladbach. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
+    "basedIn": "I am very flexible when it comes to work environments and can work effectively both in the Mönchengladbach area and remotely",
+    "challenges": "I am open-minded and always looking for personal challenges to\n          constantly improve my knowledge and skills.",
+    "description": "In my profession, programming isn't merely about writing code; it is a creative approach to problem-solving. I take pride in my ability to distill complex technical challenges into straightforward, user-friendly solutions. In doing so, I help you achieve your goals and bring your vision to life.",
+    "title": "About me",
+    "whoIAm": "Who I Am"
+  },
+  "aboveTheFold": {
+    "checkMyWork": "Check my work",
+    "contactMe": "Contact me",
+    "frontendDeveloper": "Frontend Developer"
+  },
+  "banner": {
+    "basedIn": "Based in Mönchengladbach",
+    "FrontendDeveloper": "Frontend Developer",
+    "openToWork": "Open to work",
+    "remote": "Available for remote work"
+  },
+  "contactMe": {
+    "contactMe": "Contact me",
+    "description": "Are you looking for a dedicated and skilled professional to take your project to the next level? Please feel free to get in touch! Let me know which role is pivotal for your project – whether in software development or another exciting area. With my passion for innovative solutions and my expertise, I am confident that I can make a significant contribution to your project's success.",
+    "gotProblem": "Got a problem to solve?",
+    "letsTalk": "Let's talk!",
+    "letsWork": "Lets's work together",
+    "needFrontend": "Need a Frontend Developer?",
+    "privacyPolicy": "I've read the <span class=\"privac-policy\">privacy policy</span> and agree to the processing of my data as outlined",
+    "warning": {
+      "email": "Hoppla! your email is required",
+      "message": "What do you need to develop?",
+      "name": "Oops! it seems your name is missing"
+    },
+    "yourEmail": "What's your email?",
+    "yourEmailPlaceholder": "youremail@email.de",
+    "yourMessage": "How can I help you?",
+    "yourMessagePlaceholder": "Hello Daniel, I am interested in...",
+    "yourName": "What's your name",
+    "yourNamePlaceholder": "Your name goes here"
+  },
+  "footer": {
+    "developer": "Web developer",
+    "legalNotice": "Legal Notice"
+  },
+  "header": {
+    "aboutMe": "About me",
+    "projects": "Projects",
+    "skills": "Skills"
+  },
+  "legalNotice": {
+    "contact": "Contact",
+    "impressum": "Legal Notice",
+    "responsibility": "Responsibilities",
+    "source": "Source"
+  },
+  "popUpWindow": {
+    "about": "What is this project about?",
+    "description01": "A task manager inspired by the Kanban system: create and organize tasks using drag-and-drop functionality, assign users, and categorize tasks.",
+    "description02": "Take control of Sharkie, the fearless fish, and battle your way through the depths of the ocean! Collect coins and use bottles to execute powerful attacks. Defeat smaller fish and face an increasingly challenging final boss in each level.",
+    "description03": "This application, inspired by Slack, provides an intuitive solution for enhancing internal communication. With real-time messaging and a well-organized channel structure, team interaction is significantly simplified.",
+    "nextProject": "Next project"
+  },
+  "projects": {
+    "description": "Explore a selection of my work  here - interact with projects to see my skills in action.",
+    "featuredProjects": "Featured Projects"
+  },
+  "skills": {
+    "anotherSkill": "another skill?",
+    "contactMe": "Feel free to contact me. I look forward to further expanding my knowledge.",
+    "description": "I have gained extensive experience working with HTML, CSS, JavaScript, TypeScript, and Angular, enabling me to create modern, responsive web applications. My broad skill set in front-end development empowers me to deliver creative solutions while adapting flexibly to the ever-evolving demands of the web. I place great importance on continuous learning and quickly embracing new technologies to stay ahead in this rapidly changing industry.",
+    "letsTalk": "Let's Talk",
+    "needAnotherSkill": "You need",
+    "skillSet": "Skill set",
+    "technologies": "Technlogies"
+  },
+  "whatPeopleSayAboutMe": {
+    "0": "Daniel has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the succcess of our project.",
+    "1": "Daniel's analytical approach and innovative ideas drive our projects forward. His technical expertise and readiness to share knowledge make him an invaluable team member.",
+    "2": "Daniel is reliable and communicates effectively. His structured approach under pressure ensures smooth and productive teamwork.",
+    "title": "What my colleagues say about\n    me"
+  }
 }

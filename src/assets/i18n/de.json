@@ -1,76 +1,82 @@
 {
-	"aboutMeComponent": {
-		"aboutMe": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Mönchengladbach. Angespornt von den grenzenlosen Möglichkeiten in der IT freue ich mich darauf, visuell fesselnde und intuitive Websites und Anwendungen zu gestalten.",
-		"basedIn": "Ich bin in Bezug auf Arbeitsumgebungen sehr flexibel und kann sowohl im Raum Mönchengladbach als auch remote effektiv arbeiten.",
-		"challenges": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
-		"description": "In meinem Beruf bedeutet Programmieren weit mehr, als nur Code zu schreiben – es ist eine kreative Herangehensweise an Problemlösungen. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu überführen. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Vision Wirklichkeit werden zu lassen.",
-		"title": "Über mich",
-		"whoIAm": "Wer bin ich"
-	},
-	"aboveTheFold": {
-		"checkMyWork": "Meine Projekte",
-		"contactMe": "Kontaktiere mich",
-		"frontendDeveloper": "Frontend Entwickler"
-	},
-	"banner": {
-		"basedIn": "Ansässig in Mönchengladbach",
-		"FrontendDeveloper": "Frontend Entwickler",
-		"openToWork": "Offen für Arbeit",
-		"remote": "Verfügbar für Telearbeit"
-	},
-	"contactMe": {
-		"contactMe": "Kontaktieren Sie mich.",
-		"description": "Suchen Sie nach einem engagierten und kompetenten Partner, der Ihr Projekt auf das nächste Level hebt? Zögern Sie nicht, mich zu kontaktieren! Teilen Sie mir mit, welche Rolle in Ihrem Projekt im Fokus steht – sei es in der Softwareentwicklung oder in einem anderen spannenden Bereich. Mit meiner Leidenschaft für innovative Lösungen und meiner Expertise bin ich überzeugt, dass ich entscheidend zum Erfolg Ihres Vorhabens beitragen kann.",
-		"gotProblem": "Haben Sie ein Problem, das gelöst werden muss?",
-		"letsTalk": "Lass uns reden!",
-		"letsWork": "Lass uns zusammen-arbeiten!",
-		"needFrontend": "Benötigen Sie einen Frontend-Entwickler?",
-		"privacyPolicy": "Ich habe die <span class=\"privac-policy\">Datenschutzerklärung </span>gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
-		"warning": {
-			"email": "Hoppla! Ihre E-Mail-Adresse ist erforderlich.",
-			"message": "Was möchten Sie entwickeln?",
-			"name": "Ups! Es scheint, dass Ihr Name fehlt."
-		},
-		"yourEmail": "Wie lautet Ihre E-Mail-Adresse?",
-		"yourEmailPlaceholder": "deineemail@email.de",
-		"yourMessage": "Wie kann ich Ihnen helfen?",
-		"yourMessagePlaceholder": "Hallo Daniel, ich interessiere mich für...",
-		"yourName": "Wie heißen Sie?",
-		"yourNamePlaceholder": "Ihr Name kommt hierher."
-	},
-	"footer": {
-		"developer": "Webentwickler",
-		"legalNotice": "Impressum"
-	},
-	"header": {
-		"aboutMe": "Über mich",
-		"projects": "Projekte",
-		"skills": "Fähigkeiten"
-	},
-	"popUpWindow": {
-		"about": "Worum geht es bei diesem Projekt?",
-		"description01": "Ein Task Manager, inspiriert vom Kanban-System: Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionalität, weisen Sie Benutzer zu und kategorisieren Sie Aufgaben.",
-		"description02": "Übernimm die Kontrolle über Sharkie, den furchtlosen Fisch, und kämpfe dich durch die Tiefen des Meeres! Sammle Coins und nutze Flaschen, um kraftvolle Angriffe auszuführen. Besiege kleinere Fische und stelle dich in jedem zunehmend anspruchsvolleren Level einem mächtigen Endboss.",
-		"description03": "Diese Anwendung, inspiriert von Slack, liefert eine intuitive Lösung zur Verbesserung der internen Kommunikation. Mithilfe von Sofortnachrichten und einer klar organisierten Kanalstruktur wird der Austausch im Team deutlich vereinfacht.",
-		"nextProject": "Nächstes Projekt"
-	},
-	"projects": {
-		"description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - <br> interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
-		"featuredProjects": "Ausgewählte Projekte"
-	},
-	"skills": {
-		"anotherSkill": "eine andere Fähigkeit?",
-		"contactMe": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen weiter auszubauen.",
-		"description": "Ich habe fundierte Erfahrungen mit HTML, CSS, JavaScript, TypeScript und Angular gesammelt, wodurch ich in der Lage bin, moderne, responsive Webanwendungen zu entwickeln. Mein breites Skillset im Front-End-Bereich ermöglicht es mir, kreative Lösungen zu realisieren und flexibel auf die sich ständig wandelnden Anforderungen der Webentwicklung zu reagieren. Dabei lege ich großen Wert auf kontinuierliche Weiterbildung und die schnelle Anpassung an neue Technologien, um stets am Puls der Zeit zu bleiben.",
-		"letsTalk": "Lassen Sie uns reden",
-		"needAnotherSkill": "Sie benötigen",
-		"skillSet": "Fähigkeiten",
-		"technologies": "Technologien"
-	},
-	"whatPeopleSayAboutMe": {
-		"0": "Daniel hat sich als zuverlässiger Teamkollege erwiesen. Seine technischen Fähigkeiten und seine proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
-		"1": "asdajskdqwiejqiwje asdjkajdkqiejk aksdjkdqjwiasdajdq",
-		"2": "JohahaPedohaha",
-		"title": "Was meine Kollegen über mich sagen"
-	}
+  "aboutMeComponent": {
+    "aboutMe": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Mönchengladbach. Angespornt von den grenzenlosen Möglichkeiten in der IT freue ich mich darauf, visuell fesselnde und intuitive Websites und Anwendungen zu gestalten.",
+    "basedIn": "Ich bin in Bezug auf Arbeitsumgebungen sehr flexibel und kann sowohl im Raum Mönchengladbach als auch remote effektiv arbeiten.",
+    "challenges": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
+    "description": "In meinem Beruf bedeutet Programmieren weit mehr, als nur Code zu schreiben – es ist eine kreative Herangehensweise an Problemlösungen. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu überführen. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Vision Wirklichkeit werden zu lassen.",
+    "title": "Über mich",
+    "whoIAm": "Wer bin ich"
+  },
+  "aboveTheFold": {
+    "checkMyWork": "Meine Projekte",
+    "contactMe": "Kontaktiere mich",
+    "frontendDeveloper": "Frontend Entwickler"
+  },
+  "banner": {
+    "basedIn": "Ansässig in Mönchengladbach",
+    "FrontendDeveloper": "Frontend Entwickler",
+    "openToWork": "Offen für Arbeit",
+    "remote": "Verfügbar für Telearbeit"
+  },
+  "contactMe": {
+    "contactMe": "Kontaktieren Sie mich.",
+    "description": "Suchen Sie nach einem engagierten und kompetenten Partner, der Ihr Projekt auf das nächste Level hebt? Zögern Sie nicht, mich zu kontaktieren! Teilen Sie mir mit, welche Rolle in Ihrem Projekt im Fokus steht – sei es in der Softwareentwicklung oder in einem anderen spannenden Bereich. Mit meiner Leidenschaft für innovative Lösungen und meiner Expertise bin ich überzeugt, dass ich entscheidend zum Erfolg Ihres Vorhabens beitragen kann.",
+    "gotProblem": "Haben Sie ein Problem, das gelöst werden muss?",
+    "letsTalk": "Lass uns reden!",
+    "letsWork": "Lass uns zusammen-arbeiten!",
+    "needFrontend": "Benötigen Sie einen Frontend-Entwickler?",
+    "privacyPolicy": "Ich habe die <span class=\"privac-policy\">Datenschutzerklärung </span>gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
+    "warning": {
+      "email": "Hoppla! Ihre E-Mail-Adresse ist erforderlich.",
+      "message": "Was möchten Sie entwickeln?",
+      "name": "Ups! Es scheint, dass Ihr Name fehlt."
+    },
+    "yourEmail": "Wie lautet Ihre E-Mail-Adresse?",
+    "yourEmailPlaceholder": "deineemail@email.de",
+    "yourMessage": "Wie kann ich Ihnen helfen?",
+    "yourMessagePlaceholder": "Hallo Daniel, ich interessiere mich für...",
+    "yourName": "Wie heißen Sie?",
+    "yourNamePlaceholder": "Ihr Name kommt hierher."
+  },
+  "footer": {
+    "developer": "Webentwickler",
+    "legalNotice": "Impressum"
+  },
+  "header": {
+    "aboutMe": "Über mich",
+    "projects": "Projekte",
+    "skills": "Fähigkeiten"
+  },
+  "legalNotice": {
+    "contact": "Kontakt",
+    "impressum": "Impressum",
+    "responsibility": "Verantwortlichkeiten",
+    "source": "Quelle"
+  },
+  "popUpWindow": {
+    "about": "Worum geht es bei diesem Projekt?",
+    "description01": "Ein Task Manager, inspiriert vom Kanban-System: Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionalität, weisen Sie Benutzer zu und kategorisieren Sie Aufgaben.",
+    "description02": "Übernimm die Kontrolle über Sharkie, den furchtlosen Fisch, und kämpfe dich durch die Tiefen des Meeres! Sammle Coins und nutze Flaschen, um kraftvolle Angriffe auszuführen. Besiege kleinere Fische und stelle dich in jedem zunehmend anspruchsvolleren Level einem mächtigen Endboss.",
+    "description03": "Diese Anwendung, inspiriert von Slack, liefert eine intuitive Lösung zur Verbesserung der internen Kommunikation. Mithilfe von Sofortnachrichten und einer klar organisierten Kanalstruktur wird der Austausch im Team deutlich vereinfacht.",
+    "nextProject": "Nächstes Projekt"
+  },
+  "projects": {
+    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - <br> interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "featuredProjects": "Ausgewählte Projekte"
+  },
+  "skills": {
+    "anotherSkill": "eine andere Fähigkeit?",
+    "contactMe": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen weiter auszubauen.",
+    "description": "Ich habe fundierte Erfahrungen mit HTML, CSS, JavaScript, TypeScript und Angular gesammelt, wodurch ich in der Lage bin, moderne, responsive Webanwendungen zu entwickeln. Mein breites Skillset im Front-End-Bereich ermöglicht es mir, kreative Lösungen zu realisieren und flexibel auf die sich ständig wandelnden Anforderungen der Webentwicklung zu reagieren. Dabei lege ich großen Wert auf kontinuierliche Weiterbildung und die schnelle Anpassung an neue Technologien, um stets am Puls der Zeit zu bleiben.",
+    "letsTalk": "Lassen Sie uns reden",
+    "needAnotherSkill": "Sie benötigen",
+    "skillSet": "Fähigkeiten",
+    "technologies": "Technologien"
+  },
+  "whatPeopleSayAboutMe": {
+    "0": "Daniel hat sich als zuverlässiger Teamkollege erwiesen. Seine technischen Fähigkeiten und seine proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
+    "1": "Daniels analytischer Ansatz und innovative Ideen treiben unsere Projekte voran. Seine technische Expertise und die Bereitschaft, Wissen zu teilen, machen ihn zu einem unverzichtbaren Teammitglied.",
+    "2": "Daniel ist zuverlässig und kommuniziert klar. Sein strukturierter Ansatz, auch unter Druck, sorgt für eine reibungslose und produktive Zusammenarbeit.",
+    "title": "Was meine Kollegen über mich sagen"
+  }
 }
