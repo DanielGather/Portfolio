@@ -10,15 +10,7 @@ import { FooterComponent } from './main-page/shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    MainPageComponent,
-    LegalNoticeComponent,
-    TranslateModule,
-    RouterOutlet,
-    RouterLink,
-    HeaderComponent,
-    FooterComponent,
-  ],
+  imports: [TranslateModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
