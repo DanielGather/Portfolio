@@ -111,10 +111,17 @@
     min-width: 150px;
     background-color: transparent;
     color: white;
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
   :hover {
     color: $main-color;
     border-color: $main-color;
+    a {
+      color: $main-color;
+    }
     svg {
       transform: translate(4px, -2px);
     }
