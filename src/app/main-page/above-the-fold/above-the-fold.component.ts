@@ -10,7 +10,7 @@ import { TranslateModule } from '@ngx-translate/core'; //
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss',
 })
-export class AboveTheFoldComponent implements OnInit, OnDestroy {
+export class AboveTheFoldComponent implements OnInit {
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
@@ -25,18 +25,7 @@ export class AboveTheFoldComponent implements OnInit, OnDestroy {
 
   // responsive?: boolean;
 
-  ngOnInit(): void {
-    // this.resizeSubscription = fromEvent(window, 'resize')
-    //   .pipe(debounceTime(200))
-    //   .subscribe((event: Event) => {
-    //     console.log('Resize-Event erkannt:', event);
-    //     if (window.innerWidth < 700) {
-    //       this.responsive = true;
-    //     } else if (window.innerWidth > 700) {
-    //       this.responsive = false;
-    //     }
-    //   });
-  }
+  ngOnInit(): void {}
 
   changeImage(image: string) {
     if (image == 'github') {
@@ -58,9 +47,10 @@ export class AboveTheFoldComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnDestroy(): void {
-    // if (this.resizeSubscription) {
-    //   this.resizeSubscription.unsubscribe();
-    // }
+  scrollToContact(section: 'contactMe' | 'projects'): void {
+    const contactSection = document.getElementById(section);
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

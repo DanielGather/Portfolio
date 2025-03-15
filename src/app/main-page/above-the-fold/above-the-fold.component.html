@@ -53,17 +53,19 @@
     <h2>{{ "aboveTheFold.frontendDeveloper" | translate }}</h2>
     <h1>Daniel Gather</h1>
     <div class="buttons">
-      <button>
+      <button (click)="scrollToContact('projects')">
         <p>{{ "aboveTheFold.checkMyWork" | translate }}</p>
       </button>
-      <button>
+      <button (click)="scrollToContact('contactMe')">
         <p>{{ "aboveTheFold.contactMe" | translate }}</p>
       </button>
     </div>
   </div>
   <!-- } -->
   <div class="right-container">
-    <a href="#contactMe" class="fullMail">gather.daniel&#64;yahoo.de</a>
+    <a (click)="scrollToContact('contactMe')" class="fullMail"
+      >gather.daniel&#64;yahoo.de</a
+    >
     <a
       href="#contactMe"
       class="mail"
