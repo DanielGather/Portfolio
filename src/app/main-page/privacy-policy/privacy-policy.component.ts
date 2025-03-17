@@ -7,5 +7,8 @@ import { FooterComponent } from '../shared/footer/footer.component';
   imports: [HeaderComponent, FooterComponent],
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss',
+  host: {
+    class: 'page',
+  },
 })
 export class PrivacyPolicyComponent {}

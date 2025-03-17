@@ -1,0 +1,16 @@
+@import "./../../../mixin.scss";
+@import "./../../../variables.scss";
+
+.privacy-policy {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  color: $main-color;
+  font-family: $font-karla;
+  gap: 0.5rem;
+  overflow-wrap: break-word;
+  h2 {
+    font-family: $font-fira;
+  }
+}
