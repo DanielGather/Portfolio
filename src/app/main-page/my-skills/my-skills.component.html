@@ -1,65 +1,76 @@
-<p
-  style="
-    color: #3dcfb6;
-    font-size: 24px;
-    font-family: Karla;
-    padding-bottom: 1rem;
-    padding-top: 4rem;
-  "
+<div
+  data-aos="fade-left"
+  data-aos-offset="100"
+  data-aos-delay="0"
+  data-aos-duration="1500"
+  data-aos-easing="ease-in-out"
+  data-aos-mirror="true"
+  data-aos-once="false"
+  data-aos-anchor-placement="center"
 >
-  {{ "skills.technologies" | translate }}
-</p>
-<div class="skill-container">
-  <div class="technologies">
-    <div class="left-container">
-      <h2>{{ "skills.skillSet" | translate }}</h2>
-      <span>{{ "skills.description" | translate }}</span>
-      <span style="font-weight: 700; font-size: 24px"
-        >{{ "skills.needAnotherSkill" | translate }}
-        <span style="font-weight: 700; font-size: 24px; color: #3dcfb6">{{
-          "skills.anotherSkill" | translate
-        }}</span></span
-      >
-      <span>{{ "skills.contactMe" | translate }}</span>
-      <div class="button">
-        <button (click)="scrollToContact('contactMe')">
-          <p>{{ "skills.letsTalk" | translate }}</p>
-        </button>
+  <p
+    style="
+      color: #3dcfb6;
+      font-size: 24px;
+      font-family: Karla;
+      padding-bottom: 1rem;
+      padding-top: 4rem;
+    "
+  >
+    {{ "skills.technologies" | translate }}
+  </p>
+  <div class="skill-container">
+    <div class="technologies">
+      <div class="left-container">
+        <h2>{{ "skills.skillSet" | translate }}</h2>
+        <span>{{ "skills.description" | translate }}</span>
+        <span style="font-weight: 700; font-size: 24px"
+          >{{ "skills.needAnotherSkill" | translate }}
+          <span style="font-weight: 700; font-size: 24px; color: #3dcfb6">{{
+            "skills.anotherSkill" | translate
+          }}</span></span
+        >
+        <span>{{ "skills.contactMe" | translate }}</span>
+        <div class="button">
+          <button (click)="scrollToContact('contactMe')">
+            <p>{{ "skills.letsTalk" | translate }}</p>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="skills">
-    @for (skill of skills; let last = $last; track skill){
-    <div class="skill" [class.tooltip]="last">
-      <img [src]="skill.img" alt="" />
-      <p>{{ skill.tag }}</p>
-      @if(last){
-      <div class="tooltiptext">
-        <p style="color: #3dcfb6; font-size: 16px">
-          I have a special interest in learning
-        </p>
-        <div
-          style="
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            justify-content: center;
-          "
-        >
-          <img
-            style="width: 32px; height: auto"
-            src="./../../../assets/img/skills/vuejs.webp"
-            alt=""
-          />
-          <img
-            style="width: 32px; height: auto"
-            src="./../../../assets/img/skills/react.webp"
-            alt=""
-          />
+    <div class="skills">
+      @for (skill of skills; let last = $last; track skill){
+      <div class="skill" [class.tooltip]="last">
+        <img [src]="skill.img" alt="" />
+        <p>{{ skill.tag }}</p>
+        @if(last){
+        <div class="tooltiptext">
+          <p style="color: #3dcfb6; font-size: 16px">
+            I have a special interest in learning
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <img
+              style="width: 32px; height: auto"
+              src="./../../../assets/img/skills/vuejs.webp"
+              alt=""
+            />
+            <img
+              style="width: 32px; height: auto"
+              src="./../../../assets/img/skills/react.webp"
+              alt=""
+            />
+          </div>
         </div>
+        }
       </div>
       }
     </div>
-    }
   </div>
 </div>

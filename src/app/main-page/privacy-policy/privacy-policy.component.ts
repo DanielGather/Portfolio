@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -11,4 +12,10 @@ import { FooterComponent } from '../shared/footer/footer.component';
     class: 'page',
   },
 })
-export class PrivacyPolicyComponent {}
+export class PrivacyPolicyComponent {
+  constructor(public sharedService: SharedService) {}
+
+  ngOnDestroy() {
+    this.sharedService.impressum.set(true);
+  }
+}
