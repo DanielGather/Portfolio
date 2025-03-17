@@ -12,10 +12,11 @@ import { Renderer2 } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [FormsModule, NgIf, TranslateModule],
+  imports: [FormsModule, NgIf, TranslateModule, RouterLink],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss',
 })

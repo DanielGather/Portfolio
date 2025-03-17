@@ -157,7 +157,14 @@
 
 app-root {
   @include dFlex();
-  background-color: black;
+  // background-color: black;
+  background: linear-gradient(
+    45deg,
+    $start-color 0%,
+    $start-color 45%,
+    $end-color 70%,
+    $end-color 100%
+  );
 }
 
 * {
@@ -168,6 +175,10 @@ app-root {
 
 .privac-policy {
   color: $main-color;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .page {
@@ -194,13 +205,13 @@ app-root {
   max-width: 1440px;
   padding-left: 4rem;
   padding-right: 4rem;
-  background: linear-gradient(
-    45deg,
-    $start-color 0%,
-    $start-color 45%,
-    $end-color 70%,
-    $end-color 100%
-  );
+  // background: linear-gradient(
+  //   45deg,
+  //   $start-color 0%,
+  //   $start-color 45%,
+  //   $end-color 70%,
+  //   $end-color 100%
+  // );
   overflow: hidden;
 }
 

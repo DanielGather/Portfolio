@@ -97,7 +97,13 @@
           name="privacyPolicy"
         />
         <span class="custom-checkbox"></span>
-        <p [innerHTML]="'contactMe.privacyPolicy' | translate"></p>
+        <p>
+          I've read the
+          <span routerLink="/privacy-policy" class="privac-policy"
+            >privacy policy</span
+          >
+          and agree to the processing of my data as outlined
+        </p>
       </label>
       <div class="submit-button">
         <button

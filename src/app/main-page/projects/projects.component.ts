@@ -68,41 +68,5 @@ export class ProjectsComponent {
       hover: false,
       imgProject: './../../../../assets/img/sharkieProject.webp',
     },
-    {
-      projectNumber: '03',
-      projectName: 'DABubble COMING SOON',
-      projectLink: '',
-      githubLink: '',
-      active: false,
-      description:
-        'This application, inspired by Slack, provides an intuitive solution for enhancing internal communication. With real-time messaging and a well-organized channel structure, team interaction is significantly simplified.',
-      technologyUsed: [
-        {
-          technology: 'Angular',
-          technologyImg:
-            './../../../../../assets/img/pop-up-window/Angular.webp',
-        },
-        {
-          technology: 'Firebase',
-          technologyImg:
-            './../../../../../assets/img/pop-up-window/Firebase.webp',
-        },
-        {
-          technology: 'HTML',
-          technologyImg: './../../../../../assets/img/pop-up-window/HTML.webp',
-        },
-        {
-          technology: 'CSS',
-          technologyImg: './../../../../assets/img/pop-up-window/CSS.webp',
-        },
-        {
-          technology: 'Typescript',
-          technologyImg:
-            './../../../../../assets/img/pop-up-window/TypeScript.webp',
-        },
-      ],
-      hover: false,
-      imgProject: './../../../../assets/img/comingSoon.webp',
-    },
   ];
 }
