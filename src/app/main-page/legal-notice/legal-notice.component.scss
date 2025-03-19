@@ -7,8 +7,9 @@
 
 .impressum {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
+  flex-grow: 1;
   height: 100%;
   color: $main-color;
   font-family: $font-karla;
