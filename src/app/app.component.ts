@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { MainPageComponent } from './main-page/main-page.component';
+import { RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
-import { LegalNoticeComponent } from './main-page/legal-notice/legal-notice.component';
-import { HeaderComponent } from './main-page/shared/header/header.component';
-import { FooterComponent } from './main-page/shared/footer/footer.component';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +11,19 @@ import { FooterComponent } from './main-page/shared/footer/footer.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private router: Router) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
   }
 
   title = 'Daniel Gather';
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
 }

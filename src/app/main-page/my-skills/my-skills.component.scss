@@ -103,6 +103,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .skills {
+    gap: 0.5rem;
+  }
+}
+
 .tooltip {
   position: relative;
   display: inline-block;

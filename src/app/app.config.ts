@@ -20,7 +20,7 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
 
 const routerConfig: ExtraOptions = {
   anchorScrolling: 'enabled',
-  scrollPositionRestoration: 'enabled',
+  scrollPositionRestoration: 'top',
 };
 
 export const appConfig: ApplicationConfig = {

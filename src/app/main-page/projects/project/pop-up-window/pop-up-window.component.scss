@@ -104,6 +104,12 @@
     transition: transform 0.3s ease-in-out;
   }
   button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-decoration: none !important;
+  }
+  a {
     @include dFlex($g: 0.5rem);
     cursor: pointer;
     border: 1px solid white;
@@ -111,15 +117,13 @@
     min-width: 150px;
     background-color: transparent;
     color: white;
-    a {
-      color: white;
-      text-decoration: none;
-    }
+    text-decoration: none;
   }
-  :hover {
+  a:hover {
     color: $main-color;
     border-color: $main-color;
-    a {
+    button {
+      cursor: pointer;
       color: $main-color;
     }
     svg {
