@@ -25,7 +25,10 @@
     "letsTalk": "Lass uns reden!",
     "letsWork": "Lass uns zusammen-arbeiten!",
     "needFrontend": "Benötigen Sie einen Frontend-Entwickler?",
-    "privacyPolicy": "Ich habe die <span class=\"privac-policy\">Datenschutzerklärung </span>gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
+    "privacyPolicy1": "Ich habe die",
+    "privacyPolicy2": "Datenschutzerklärung",
+    "privacyPolicy3": "gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
+    "privacyPolicy4": "Hallo :)",
     "warning": {
       "email": "Hoppla! Ihre E-Mail-Adresse ist erforderlich.",
       "message": "Was möchten Sie entwickeln?",

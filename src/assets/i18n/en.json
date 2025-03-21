@@ -25,7 +25,10 @@
     "letsTalk": "Let's talk!",
     "letsWork": "Lets's work together",
     "needFrontend": "Need a Frontend Developer?",
-    "privacyPolicy": "I've read the <span (click)='navigateToPrivatePolicy($event)' class=\"privac-policy\">privacy policy</span> and agree to the processing of my data as outlined",
+    "privacyPolicy1": "I've read the",
+    "privacyPolicy2": "privacy policy",
+    "privacyPolicy3": "and agree to the processing of my data as outlined",
+    "privacyPolicy4": "Hello :)",
     "warning": {
       "email": "Hoppla! your email is required",
       "message": "What do you need to develop?",

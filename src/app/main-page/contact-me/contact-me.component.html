@@ -105,11 +105,11 @@
         />
         <span class="custom-checkbox"></span>
         <p>
-          I've read the
-          <span routerLink="/privacy-policy" class="privac-policy"
-            >privacy policy</span
-          >
-          and agree to the processing of my data as outlined
+          {{ "contactMe.privacyPolicy1" | translate }}
+          <span routerLink="/privacy-policy" class="privac-policy">{{
+            "contactMe.privacyPolicy2" | translate
+          }}</span>
+          {{ "contactMe.privacyPolicy3" | translate }}
         </p>
       </label>
       <div class="submit-button">
@@ -122,7 +122,7 @@
             nameModel.invalid
           "
         >
-          <p>Say Hello :)</p>
+          <p>{{ "contactMe.privacyPolicy4" | translate }}</p>
         </button>
         @if(sendComplete){
         <div
