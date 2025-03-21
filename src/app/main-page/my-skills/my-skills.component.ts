@@ -58,7 +58,7 @@ export class MySkillsComponent {
   scrollToContact(section: 'contactMe'): void {
     const contactSection = document.getElementById(section);
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
   }
 }
