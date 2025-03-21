@@ -92,4 +92,17 @@
     top: 0.5rem;
     left: -0.5rem;
   }
+  .right-container {
+    h2 {
+      font-size: 44px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

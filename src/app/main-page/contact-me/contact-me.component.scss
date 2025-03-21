@@ -254,3 +254,18 @@
     }
   }
 }
+@media (max-width: 767px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .left-container {
+    h2 {
+      font-size: 44px;
+    }
+  }
+}

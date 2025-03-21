@@ -13,11 +13,19 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .projects {
     h2 {
-      font-size: 54px;
+      font-size: 44px;
       overflow-wrap: break-word;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
